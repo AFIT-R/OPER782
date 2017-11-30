@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1512071570998.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2406534212",
+    "id" : "21AE03B3",
+    "lastKnownWriteTime" : 1512074092,
+    "last_content_update" : 1512074092285,
+    "path" : "~/AFIT/OPER782/R/cfbwins.R",
+    "project_path" : "R/cfbwins.R",
+    "properties" : {
+        "cursorPosition" : "18,21",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

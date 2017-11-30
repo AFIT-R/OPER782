@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1512068308756.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "90B1D423",
+    "lastKnownWriteTime" : 1512071543,
+    "last_content_update" : 1512071543242,
+    "path" : "~/AFIT/OPER782/R/numberize.R",
+    "project_path" : "R/numberize.R",
+    "properties" : {
+        "cursorPosition" : "12,10",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
