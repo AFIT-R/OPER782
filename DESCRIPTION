@@ -4,9 +4,10 @@ Title: Example Functions for OPER 782
 Version: 0.1.0
 Author: AFIT DSL
 Maintainer: AFIT DSL <jason.freels@afit.edu>
-Description: This package contains a series of functions that will allow
-    students in the OPER 782 class to experience making a pull request,
-    raising an issue, and other GitHub functionality.
+Description: This package contains a series of functions that 
+             will allow students in the OPER 782 class to 
+             experience making a pull request, raising an issue, 
+             and other GitHub functionality.
 Imports: rvest
 Encoding: UTF-8
 LazyData: true
