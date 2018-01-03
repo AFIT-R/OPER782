@@ -2,41 +2,46 @@
 title: "2017 College Football National Championship"
 subtitle: "Final Score Prediction"
 date: "January 8, 2018"
-output: html_document
+output: 
+  html_document:
+    df_print: 'kable'
+params:
+  AL: 24
+  GA: 14
 ---
 
-```{r setup, include=FALSE}
+```{r setup}
 knitr::opts_chunk$set(echo = TRUE)
+library(tibble)
 ```
 
-## Add your scores here
+00 Add your scores here
 
-<table style="text-align: center;">
-  <col width="130">
-  <col width="130">
-  <col width="130">
-<tr><th>Name</th><th>Alabama</th><th>Georgia</th></tr>
-<tr><td>Jason Freels</td><td>24</td><td>34</td></tr>
-<tr><td>Spencer Butt</td><td>##</td><td>##</td></tr>
-<tr><td>Jacob Elliott</td><td>##</td><td>##</td></tr>
-<tr>
-  <td>James Gallagher</td>
-  <td>28</td><td>38</td>
-</tr>
-<tr>
-  <td>Jake Johnson</td>
-  <td>23</td><td>20</td>
-</tr>
-<tr><td>Anthony Kallhoff</td><td>##</td><td>##</td></tr>
-<tr><td>Evan Munson</td><td>##</td><td>##</td></tr>
-<tr><td>Rachel Ramirez</td><td>##</td><td>##</td></tr>
-<tr><td>William Sevier</td><td>34</td><td>24</td></tr>
-<tr>
-  <td>Matthew Small</td>
-  <td>17</td><td>21</td>
-</tr>
-<tr><td>Jeffrey Smith</td><td>##</td><td>##</td></tr>
-<tr><td>Sean Stuntz</td><td>##</td><td>##</td></tr>
-<tr><td>Alexander Trigo</td><td>##</td><td>##</td></tr>
-<tr><td>Nicolas Uhorchack</td><td>57</td><td>48</td></tr>
-</table>
+```{r, echo=FALSE}
+scores <- 
+  tribble(
+~Name,              ~AL, ~GA,
+"Jason Freels",      00,  00,
+"Spencer Butt",      00,  00,
+"Jacob Elliott",     00,  00,
+"James Gallagher",   00,  00,
+"Jake Johnson",      00,  00,
+"Anthony Kallhoff",  00,  00,
+"Evan Munson",       00,  00,
+"Rachel Ramirez",    00,  00,
+"William Sevier",    00,  00,
+"Matthew Small",     00,  00,
+"Jeffrey Smith",     00,  00,
+"Sean Stuntz",       00,  00,
+"Alexander Trigo",   00,  00,
+"Nicolas Uhorchack", 00,  00
+)
+
+```
+
+```{r, echo=FALSE}
+diff <- (scores$AL - params$AL) + (scores$GA - params$GA)
+
+scores$rank <- rank(diff)
+scores
+```
