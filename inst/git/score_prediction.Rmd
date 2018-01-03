@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 <tr><td>Jason Freels</td><td>24</td><td>34</td></tr>
 <tr><td>############</td><td>##</td><td>##</td></tr>
 <tr><td>############</td><td>##</td><td>##</td></tr>
-<tr><td>############</td><td>##</td><td>##</td></tr>
+<tr><td>Jason Freels</td><td>24</td><td>34</td></tr>
 <tr><td>############</td><td>##</td><td>##</td></tr>
 <tr><td>############</td><td>##</td><td>##</td></tr>
 <tr><td>############</td><td>##</td><td>##</td></tr>
