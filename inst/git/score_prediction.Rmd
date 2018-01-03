@@ -1,0 +1,33 @@
+---
+title: "2017 College Football National Championship"
+subtitle: "Final Score Prediction"
+date: "January 8, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Add your scores here
+
+<table style="text-align: center;">
+  <col width="130">
+  <col width="130">
+  <col width="130">
+<tr><th>Name</th><th>Alabama</th><th>Georgia</th></tr>
+<tr><td>Jason Freels</td><td>24</td><td>34</td></tr>
+<tr><td>############</td><td>##</td><td>##</td></tr>
+<tr><td>############</td><td>##</td><td>##</td></tr>
+<tr><td>############</td><td>##</td><td>##</td></tr>
+<tr><td>############</td><td>##</td><td>##</td></tr>
+<tr><td>############</td><td>##</td><td>##</td></tr>
+<tr><td>############</td><td>##</td><td>##</td></tr>
+<tr><td>############</td><td>##</td><td>##</td></tr>
+<tr><td>############</td><td>##</td><td>##</td></tr>
+<tr><td>############</td><td>##</td><td>##</td></tr>
+<tr><td>############</td><td>##</td><td>##</td></tr>
+<tr><td>############</td><td>##</td><td>##</td></tr>
+<tr><td>############</td><td>##</td><td>##</td></tr>
+<tr><td>############</td><td>##</td><td>##</td></tr>
+</table>
