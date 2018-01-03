@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 <tr><td>############</td><td>##</td><td>##</td></tr>
 <tr><td>############</td><td>##</td><td>##</td></tr>
 <tr><td>############</td><td>##</td><td>##</td></tr>
-<tr><td>############</td><td>##</td><td>##</td></tr>
+<tr><td>gittestdummy</td><td>34</td><td>24</td></tr>
 <tr><td>############</td><td>##</td><td>##</td></tr>
 <tr><td>############</td><td>##</td><td>##</td></tr>
 <tr><td>############</td><td>##</td><td>##</td></tr>
