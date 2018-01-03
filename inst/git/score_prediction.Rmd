@@ -32,5 +32,5 @@ knitr::opts_chunk$set(echo = TRUE)
 <tr><td>Jeffrey Smith</td><td>##</td><td>##</td></tr>
 <tr><td>Sean Stuntz</td><td>##</td><td>##</td></tr>
 <tr><td>Alexander Trigo</td><td>##</td><td>##</td></tr>
-<tr><td>Nicolas Uhorchack</td><td>##</td><td>##</td></tr>
+<tr><td>Nicolas Uhorchack</td><td>57</td><td>48</td></tr>
 </table>
