@@ -19,7 +19,10 @@ knitr::opts_chunk$set(echo = TRUE)
 <tr><td>Jason Freels</td><td>24</td><td>34</td></tr>
 <tr><td>Spencer Butt</td><td>##</td><td>##</td></tr>
 <tr><td>Jacob Elliott</td><td>##</td><td>##</td></tr>
-<tr><td>James Gallagher</td><td>24</td><td>34</td></tr>
+<tr>
+  <td>James Gallagher</td>
+  <td>28</td><td>38</td>
+</tr>
 <tr><td>Jake Johnson</td><td>##</td><td>##</td></tr>
 <tr><td>Anthony Kallhoff</td><td>##</td><td>##</td></tr>
 <tr><td>Evan Munson</td><td>##</td><td>##</td></tr>
