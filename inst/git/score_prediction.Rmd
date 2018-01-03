@@ -17,17 +17,17 @@ knitr::opts_chunk$set(echo = TRUE)
   <col width="130">
 <tr><th>Name</th><th>Alabama</th><th>Georgia</th></tr>
 <tr><td>Jason Freels</td><td>24</td><td>34</td></tr>
-<tr><td>############</td><td>##</td><td>##</td></tr>
-<tr><td>############</td><td>##</td><td>##</td></tr>
-<tr><td>Jason Freels</td><td>24</td><td>34</td></tr>
-<tr><td>############</td><td>##</td><td>##</td></tr>
-<tr><td>############</td><td>##</td><td>##</td></tr>
-<tr><td>############</td><td>##</td><td>##</td></tr>
-<tr><td>############</td><td>##</td><td>##</td></tr>
-<tr><td>gittestdummy</td><td>34</td><td>24</td></tr>
-<tr><td>############</td><td>##</td><td>##</td></tr>
-<tr><td>############</td><td>##</td><td>##</td></tr>
-<tr><td>############</td><td>##</td><td>##</td></tr>
-<tr><td>############</td><td>##</td><td>##</td></tr>
-<tr><td>############</td><td>##</td><td>##</td></tr>
+<tr><td>Spencer Butt</td><td>##</td><td>##</td></tr>
+<tr><td>Jacob Elliott</td><td>##</td><td>##</td></tr>
+<tr><td>James Gallagher</td><td>24</td><td>34</td></tr>
+<tr><td>Jake Johnson</td><td>##</td><td>##</td></tr>
+<tr><td>Anthony Kallhoff</td><td>##</td><td>##</td></tr>
+<tr><td>Evan Munson</td><td>##</td><td>##</td></tr>
+<tr><td>Rachel Ramirez</td><td>##</td><td>##</td></tr>
+<tr><td>William Sevier</td><td>34</td><td>24</td></tr>
+<tr><td>Matthew Small</td><td>##</td><td>##</td></tr>
+<tr><td>Jeffrey Smith</td><td>##</td><td>##</td></tr>
+<tr><td>Sean Stuntz</td><td>##</td><td>##</td></tr>
+<tr><td>Alexander Trigo</td><td>##</td><td>##</td></tr>
+<tr><td>Nicolas Uhorchack</td><td>##</td><td>##</td></tr>
 </table>
