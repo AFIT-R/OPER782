@@ -31,7 +31,10 @@ knitr::opts_chunk$set(echo = TRUE)
 <tr><td>Evan Munson</td><td>##</td><td>##</td></tr>
 <tr><td>Rachel Ramirez</td><td>##</td><td>##</td></tr>
 <tr><td>William Sevier</td><td>34</td><td>24</td></tr>
-<tr><td>Matthew Small</td><td>##</td><td>##</td></tr>
+<tr>
+  <td>Matthew Small</td>
+  <td>17</td><td>21</td>
+</tr>
 <tr><td>Jeffrey Smith</td><td>##</td><td>##</td></tr>
 <tr><td>Sean Stuntz</td><td>##</td><td>##</td></tr>
 <tr><td>Alexander Trigo</td><td>##</td><td>##</td></tr>
