@@ -82,7 +82,7 @@ shiny::includeScript("js/jkf-scroll.js")
 
 ## For a fast, easy, and stress-free workflow
 
-<img src="before-version-control.png" style="float: right; padding: 100px 300px 0px 5px; width: 250px;">
+<img src="images/before-version-control.png" style="float: right; padding: 100px 300px 0px 5px; width: 250px;">
 
 <ul style="display:inherit;">
 - Workflows without Git typically consist of
@@ -104,7 +104,7 @@ shiny::includeScript("js/jkf-scroll.js")
 Your workflow - <font color='red'><u>without</u></font> Git
 <br/>
 <p>
-<img src="giphy-frustrated.gif" style="width: 450px; margin-bottom:50px;">
+<img src="images/giphy-frustrated.gif" style="width: 450px; margin-bottom:50px;">
 </p>
 </center>
 </div>
@@ -370,4 +370,7 @@ knitr::include_graphics("images/new-repo-5.png")
 
 ## Any questions?
 
-<center>![](giphy-shaun.gif)</center>
+```{r, out.width = "400px"}
+knitr::include_graphics("images/giphy-shaun.gif")
+```
+
