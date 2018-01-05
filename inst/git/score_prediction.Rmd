@@ -12,14 +12,13 @@ params:
 
 ```{r setup}
 knitr::opts_chunk$set(echo = TRUE)
-library(tibble)
 ```
 
 ## Add your scores here
 
 ```{r, echo=FALSE}
 scores <- 
-  tribble(
+  tibble::tribble(
 ~Name,              ~AL, ~GA,
 "Jason Freels",      00,  00,
 "Spencer Butt",      00,  00,
@@ -36,7 +35,6 @@ scores <-
 "Alexander Trigo",   00,  00,
 "Nicolas Uhorchack", 00,  00
 )
-
 ```
 
 ```{r, echo=FALSE}
