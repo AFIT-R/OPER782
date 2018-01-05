@@ -1,0 +1,1155 @@
+div.toolbar {
+  font-size: 14pt;
+  color: #FFF;
+  background-color: #2C3E50;
+  font-weight: normal;
+  text-transform: uppercase;
+  position: fixed;
+  z-index: 200;
+  top: 100;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 2em;
+  height: 2em;
+  text-align: right;
+  padding-left: 1em;
+  padding-right: 1em;
+  border: solid 1px #2C3E50;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+div.toolbar.shrink {
+  font-size: 50%;
+  color: #FFF;
+  background-color: #2C3E50;
+  font-weight: normal;
+  text-transform: uppercase;
+  position: fixed;
+  z-index: 200;
+  line-height: 1.5em;
+  height: 1.5em;
+  text-align: right;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-top: solid 1px #2C3E50;
+}
+div.toolbar span.copyright {
+  color: #FFF;
+  margin-left: 0.5em;
+  font-weight: normal;
+  padding-top: .55em;
+}
+div.initial_prompt {
+  position: absolute;
+  z-index: 1000;
+  bottom: 2em;
+  width: 100%;
+  opacity: 0.35;
+  background-color: #c8c8c8;
+  cursor: pointer;
+  color: #FFF;
+}
+div.initial_prompt p.help {
+  text-align: center;
+}
+div.initial_prompt p.close {
+  text-align: right;
+  font-style: italic;
+}
+div.slidy_toc {
+  position: absolute;
+  z-index: 300;
+  width: 80%;
+  max-width: 40em;
+  height: 30em;
+  overflow: auto;
+  top: auto;
+  right: auto;
+  left: 4em;
+  bottom: 4em;
+  padding: 1em;
+  background: #f0f0f0;
+  border-style: solid;
+  border-width: 2px;
+  font-size: 60%;
+}
+div.slidy_toc .toc_heading {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 1em;
+  border-bottom-style: solid;
+  border-bottom-color: #b4b4b4;
+  border-bottom-width: 1px;
+}
+div.slide {
+  z-index: 20;
+  padding: 0 0 0 0;
+  margin-bottom: 0;
+  border-width: 0;
+  clear: both;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 100%;
+  background-color: #FFF;
+  background-size: 100%;
+  font-weight: bold;
+  font-size: 20pt;
+}
+div.slide h1 {
+  padding-left: 25px;
+  padding-right: 0;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  display: block;
+  font-size: 28pt;
+  line-height: 1.1em;
+  color: #FFF;
+  background-color: #2C3E50;
+  font-weight: normal;
+  top: 0;
+  text-transform: uppercase;
+  position: fixed;
+  transition: all 0.6s ease;
+  z-index: 10;
+}
+div.slide h1.shrink {
+  font-size: 65%;
+}
+div.slide h3 {
+  text-align: center;
+  padding: 0 0 0 0;
+  margin: 0.75em 0 0.75em 0;
+  width: 100%;
+  display: block;
+  font-size: 24pt;
+  line-height: 1.3em;
+  background-color: #e6e6e6;
+  border-style: solid;
+  border-color: #2C3E50;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: thin;
+  border-bottom-width: thin;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+div.slide h2 {
+  padding: 0 0.5em 5px 10px;
+  margin: 1.5em auto 0.75em auto;
+  width: 95%;
+  display: block;
+  font-size: 24pt;
+  line-height: 1.3em;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: capitalize;
+  color: #2C3E50;
+}
+div.slide h2:after {
+  content: ' ';
+  display: block;
+  border: 1.5pt solid #149C82;
+  margin-top: 10px;
+}
+div.slide h2:before {
+  content: '  ';
+}
+body {
+  margin: 0 0 0 0;
+  width: 100%;
+  height: 100%;
+  font-family: "lucida", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 44pt;
+  z-index: 12;
+  background-color: #FFF ;
+}
+div.background {
+  display: none;
+}
+div.handout {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+div.slide.titlepage {
+  text-align: left;
+  font-weight: normal;
+  font-size: 24pt;
+  line-height: 150%;
+  background: -webkit-linear-gradient(45deg, #7c1818 0%, transparent 70%), -webkit-linear-gradient(135deg, #43b19b 10%, transparent 80%), -webkit-linear-gradient(225deg, #a08fd6 10%, transparent 80%), -webkit-linear-gradient(315deg, #204017 50%, transparent 100%);
+  background: -ms-linear-gradient(45deg, #7c1818 0%, transparent 70%), -ms-linear-gradient(135deg, #43b19b 10%, transparent 80%), -ms-linear-gradient(225deg, #a08fd6 10%, transparent 80%), -ms-linear-gradient(315deg, #204017 50%, transparent 100%);
+  background: linear-gradient(45deg, #7c1818 0%, transparent 70%), linear-gradient(135deg, #43b19b 10%, transparent 80%), linear-gradient(225deg, #a08fd6 10%, transparent 80%), linear-gradient(315deg, #204017 50%, transparent 100%);
+  background-size: 100%;
+  color: #FFF;
+}
+div.slide.titlepage h1.title {
+  margin-top: 25%;
+  padding-top: 0;
+  color: #FFF;
+  padding-left: 25px;
+  margin-right: 0;
+  border-bottom: none;
+  background: none;
+  font-size: 48pt;
+  font-weight: bold;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.slide.titlepage p {
+  color: #FFF;
+}
+
+@media screen and (max-device-width: 1024px) {
+  div.slide {
+    font-size: 100%;
+  }
+}
+@media screen and (max-device-width: 800px) {
+  div.slide {
+    font-size: 200%;
+  }
+  div.slidy_toc {
+    top: 1em;
+    left: 1em;
+    right: auto;
+    width: 80%;
+    font-size: 180%;
+  }
+}
+div.toc-heading {
+  width: 100%;
+  border-bottom: solid 1px #b4b4b4;
+  margin-bottom: 1em;
+  text-align: center;
+}
+img {
+  image-rendering: optimize-quality;
+}
+pre {
+  padding: 15px 0 15px 75px;
+  border-style: solid;
+  border-top-width: 1.75px;
+  border-bottom-width: 1.75px;
+  border-right-width: 1.75px;
+  border-left-width: 0;
+  border-color: #00428C;
+  color: #00428C;
+  background-color: #FFF ;
+  margin: 30px 150px 30px 0px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 0;
+}
+pre code {
+  font-size: 18pt;
+  font-weight: 550;
+  line-height: 120%;
+}
+li pre {
+  margin-right: 0;
+  border: none;
+  font-family: "modern";
+}
+/*
+blockquote { font-size: 90%;
+             line-height: 1.15em;
+             font-weight: normal;
+             margin: 50px 10% 50px 10%;
+             padding: 50px;
+             color: #FFF;
+             border-width: thin;
+             border-radius: 1000px;
+             border-color: #2C3E50;
+             background-color:#2C3E50;
+             border-style: solid;
+             font-family: "Century Gothic", "Optima", "Segoe UI", sans-serif;
+             text-align: center;
+}
+*/
+blockquote {
+  padding: 40px 0 30px 30px !important;
+  border: solid 0;
+  border-left-width: 8px !important;
+  border-color: #2e7061 !important;
+  margin-left: auto !important;
+  width: 80%;
+  margin-bottom: 30px !important;
+  display: block !important;
+  color: inherit !important;
+}
+blockquote p {
+  font-size: 1.25em !important;
+  line-height: 1em;
+  font-family: sans-serif !important;
+  font-weight: bold !important;
+  margin-top: -20px !important;
+  margin-bottom: 0 !important;
+}
+blockquote:before {
+  content: '“';
+  font-size: 3em;
+  line-height: .005em !important;
+  font-family: "PT Serif", Georgia, "Times New Roman", serif !important;
+  color: #2e7061 !important;
+  font-weight: bold !important;
+}
+blockquote p qref {
+  font-size: .45em;
+  padding-top: 60px;
+  line-height: 0;
+  display: block;
+  font-weight: normal;
+}
+blockquote p qref:before {
+  content: '\2014  ';
+  font-weight: normal;
+}
+img {
+  background-color: transparent;
+}
+p.copyright {
+  font-size: smaller;
+  color: #FFF;
+}
+.center {
+  text-align: center;
+}
+.footnote {
+  font-size: smaller;
+  margin-left: 2em;
+  color: #FFF;
+  margin-top: .25em;
+  margin-bottom: .25em;
+  line-height: 40%;
+}
+a img {
+  border-width: 0;
+  border-style: none;
+}
+a:visited {
+  color: #149C82;
+  font-weight: bold;
+}
+a:link {
+  color: #149C82;
+  font-weight: bold;
+}
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+a:active {
+  color: red;
+  text-decoration: underline;
+}
+a {
+  text-decoration: none;
+}
+.toolbar a:link {
+  color: #149C82;
+  font-weight: bold;
+}
+.toolbar a:visited {
+  color: #149C82;
+  font-weight: bold;
+}
+.toolbar a:active {
+  color: red;
+  font-weight: bold;
+}
+.toolbar a:hover {
+  color: red;
+  font-weight: bold;
+}
+ul {
+  list-style-type: square;
+  margin: 0.5em 1.5em 0.5em 1.5em;
+}
+ul ul {
+  list-style-type: disc;
+  margin: 0.25em 1.0em 0.25em 1.0em;
+}
+ul ul ul {
+  list-style-type: circle;
+}
+ul ul ul ul {
+  list-style-type: disc;
+}
+li {
+  margin-left: 1.5em;
+  margin-top: 50px;
+  font-size: 28pt;
+}
+li li {
+  font-size: 24pt;
+  margin-top: .5em;
+}
+li li li {
+  font-size: 20pt;
+  font-style: normal;
+}
+ol {
+  list-style-type: decimal;
+  margin: 0.5em 1.5em 0.5em 1.5em;
+}
+ol ol {
+  list-style-type: decimal;
+  margin: 0.25em 1.0em 0.25em 1.0em;
+}
+ol ul ol {
+  list-style-type: decimal;
+}
+ol ol ol ol {
+  list-style-type: decimal;
+}
+li {
+  margin-left: 1.5em;
+  margin-top: 50px;
+  font-size: 28pt;
+}
+li li {
+  font-size: 24pt;
+  margin-top: .5em;
+}
+li li li {
+  font-size: 20pt;
+  font-style: normal;
+}
+div dt {
+  margin-left: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+div dd {
+  margin-left: 2em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+div.slide.titlepage h1.subtitle {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 36px;
+  padding-top: 10px;
+  color: #FFF;
+  font-size: 30pt;
+  background: none;
+  text-transform: capitalize;
+  position: relative;
+}
+ul,
+ol,
+h3,
+h4,
+h5,
+h6,
+dl {
+  margin-left: 0;
+  margin-right: 1em;
+}
+p {
+  margin-left: 0;
+  margin-right: 0;
+  color: #2C3E50;
+}
+.author {
+  margin-left: 1em;
+}
+.date {
+  margin-left: 1em;
+}
+.subhead {
+  font-weight: bold;
+  margin-top: 2em;
+}
+small {
+  font-size: 90%;
+}
+smaller {
+  font-size: 80%;
+}
+smallest {
+  font-size: 70%;
+}
+big {
+  font-size: 110%;
+}
+bigger {
+  font-size: 120%;
+}
+biggest {
+  font-size: 130%;
+}
+td,
+th {
+  padding: 0.2em;
+}
+ul {
+  margin: 0.5em 1.5em 0.5em 1.75em;
+  padding: 0 0 0 0;
+  font-weight: normal;
+  color: #2C3E50;
+  text-shadow: none;
+  font-size: 20pt;
+}
+ol {
+  margin: 0.5em 1.5em 0.5em 1.75em;
+  padding: 0;
+  font-weight: normal;
+  color: #2C3E50;
+  text-shadow: none;
+  font-size: 20pt;
+}
+ul {
+  list-style-type: square;
+}
+ul ul {
+  list-style-type: disc;
+}
+ul ul ul {
+  list-style-type: circle;
+}
+ul ul ul ul {
+  list-style-type: disc;
+}
+ul li {
+  list-style: square;
+  margin: 1em 0 1.5em 1em;
+  padding: 0 0 0 1em;
+  line-height: 140%;
+}
+blockquote ul li {
+  list-style: square;
+  margin: 1em 0 1em 1em;
+  padding: 0 0 0 0;
+  line-height: 100%;
+  font-size: 24pt;
+}
+ol li {
+  margin: 1em 0 1.5em 1em;
+  padding: 0 0 0 1em;
+  line-height: 140%;
+  list-style-type: decimal;
+}
+blockquote ol li {
+  margin: 0.75em 0 0.75em 1.5em;
+  padding: 0 0 0 0;
+  line-height: 100%;
+  list-style-type: decimal;
+  font-size: 24pt;
+}
+li ul li {
+  font-size: 24pt;
+  font-style: normal;
+  list-style-type: disc;
+  background: transparent;
+  padding: 0 0 0 1em;
+  margin: 1em 0 1em 0.25em;
+}
+blockquote li ul li {
+  font-size: 20pt;
+  list-style-type: disc;
+  background: transparent;
+  padding: 0 0 0 0;
+  margin: 1em 0 1em 1.3em;
+}
+li li ul li {
+  font-size: 85%;
+  font-style: normal;
+  list-style-type: circle;
+  background: transparent;
+  padding: 0 0 0 0;
+}
+blockquote li li ul li {
+  font-size: 18pt;
+  font-style: normal;
+  list-style-type: circle;
+  background: transparent;
+  padding: 0 0 0 0;
+}
+li li li ul li {
+  list-style-type: disc;
+  background: transparent;
+  padding: 0 0 0 0;
+}
+blockquote li li li ul li {
+  list-style-type: disc;
+  background: transparent;
+  padding: 0 0 0 0;
+  font-size: 70%;
+}
+li ol li {
+  list-style-type: decimal;
+  font-size: 24pt;
+  font-style: normal;
+  background: transparent;
+  padding: 0 0 0 1em;
+  margin: 1em 0 1em 0.25em;
+}
+ol li ul li {
+  margin-left: -0.4em;
+}
+ul li ol li {
+  margin-left: -0.4em;
+}
+li li ol li {
+  list-style-type: decimal;
+}
+/* for slides with class "title" in table of contents */
+a.titleslide {
+  font-weight: bold;
+  font-style: italic;
+}
+/*
+ hide images for work around for save as bug
+ where browsers fail to save images used by CSS
+*/
+img.hidden {
+  display: none;
+  visibility: hidden;
+}
+div.initial_prompt {
+  display: none;
+  visibility: hidden;
+}
+div.slide {
+  visibility: visible;
+  position: inherit;
+}
+div.handout {
+  border-top-style: solid;
+  border-top-width: thin;
+  border-top-color: black;
+}
+@media screen {
+  .hidden {
+    display: none;
+    visibility: visible;
+  }
+  div.slide.hidden {
+    display: block;
+    visibility: visible;
+  }
+  div.handout.hidden {
+    display: block;
+    visibility: visible;
+  }
+  div.background {
+    display: none;
+    visibility: hidden;
+  }
+  body.single_slide div.initial_prompt {
+    display: block;
+    visibility: visible;
+  }
+  body.single_slide div.background {
+    display: block;
+    visibility: visible;
+  }
+  body.single_slide div.background.hidden {
+    display: none;
+    visibility: hidden;
+  }
+  body.single_slide .invisible {
+    visibility: hidden;
+  }
+  body.single_slide .hidden {
+    display: none;
+    visibility: hidden;
+  }
+  body.single_slide div.slide {
+    position: absolute;
+  }
+  body.single_slide div.handout {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media print {
+  .hidden {
+    display: block;
+    visibility: visible;
+  }
+  div.slide pre {
+    font-size: 10%;
+    padding-left: 0;
+  }
+  div.toolbar {
+    display: none;
+    visibility: hidden;
+  }
+  div.slidy_toc {
+    display: none;
+    visibility: hidden;
+  }
+  div.background {
+    display: none;
+    visibility: hidden;
+  }
+  div.slide {
+    page-break-before: always;
+  }
+  /* :first-child isn't reliable for print media */
+  div.slide.first-slide {
+    page-break-before: avoid;
+  }
+}
+/* the below rules increase compatibility with Shiny and Bootstrap */
+/* remove margins that misalign sliders */
+.jslider table {
+  margin-left: 0em;
+  margin-right: 0em;
+}
+/* don't use very large fonts in datatables */
+table.dataTable,
+.shiny-datatable-output div {
+  font-size: 12pt;
+}
+/* adjust footer element size for DT package */
+.dataTables_info,
+.dataTables_paginate {
+  font-size: 16px;
+}
+/* allow R chunks to render in a large font */
+/* increase the input font size set by Bootstrap */
+label,
+button,
+input,
+select,
+textarea {
+  font-size: 14pt;
+}
+/* eliminate bullets in Bootstrap navigation lists */
+ul.nav,
+ul.nav li {
+  list-style-type: none;
+}
+#play {
+  opacity: 0.0 ;
+  position: absolute ;
+  right: 25% ;
+  bottom: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #149C82;
+  width: 60px;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+#play:hover {
+  opacity: 1.0;
+}
+#fillpic {
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+hr {
+  display: block;
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 2px;
+  border: none;
+}
+.navbar-static-top {
+  border-radius: 20px;
+}
+red {
+  color: red;
+  font-weight: bold;
+}
+blue {
+  color: blue;
+  font-weight: bold;
+}
+green {
+  color: green;
+  font-weight: bold;
+}
+purple {
+  color: purple;
+  font-weight: bold;
+}
+orange {
+  color: orange;
+  font-weight: bold;
+}
+brown {
+  color: brown;
+  font-weight: bold;
+}
+pink {
+  color: pink;
+  font-weight: bold;
+}
+gray {
+  color: gray;
+  font-weight: bold;
+}
+black {
+  color: black;
+  font-weight: bold;
+}
+focus {
+  background-color: #F39C12;
+  border-color: orange;
+  border-radius: 10px;
+  padding: 4px 8px 5px 8px;
+  white-space: nowrap;
+}
+/* line 468, scss/default.scss */
+.columns-2 {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  -o-column-count: 2;
+  column-count: 2;
+}
+/* workaround for Safari 8 render bug with lists in columns */
+.columns-2 ul,
+.columns-2 ol {
+  -webkit-transform: translate3d(0, 0, 0);
+}
+#container2 {
+  clear: left;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+#container1 {
+  float: left;
+  width: 100%;
+  position: relative;
+  right: 50%;
+}
+#col1 {
+  float: left;
+  width: 46%;
+  position: relative;
+  left: 52%;
+  overflow: hidden;
+}
+#col2 {
+  float: left;
+  width: 46%;
+  position: relative;
+  left: 56%;
+  overflow: hidden;
+}
+code {
+  font-size: .8em;
+  font-family: 'Source Code Pro', 'Courier New', monospace;
+  font-weight: normal;
+  padding: .1em .3em .1em .3em;
+  border-radius: .3em;
+  vertical-align: 10%;
+}
+code > span.kw {
+  color: #007020;
+  font-weight: bold;
+}
+/* Keyword */
+code > span.dt {
+  color: #902000;
+}
+/* DataType */
+code > span.dv {
+  color: #40a070;
+}
+/* DecVal */
+code > span.bn {
+  color: #40a070;
+}
+/* BaseN */
+code > span.fl {
+  color: #40a070;
+}
+/* Float */
+code > span.ch {
+  color: #4070a0;
+}
+/* Char */
+code > span.st {
+  color: #4070a0;
+}
+/* String */
+code > span.co {
+  color: #60a0b0;
+  font-style: italic;
+}
+/* Comment */
+code > span.ot {
+  color: #007020;
+}
+/* Other */
+code > span.al {
+  color: #ff0000;
+  font-weight: bold;
+}
+/* Alert */
+code > span.fu {
+  color: #06287e;
+}
+/* Function */
+code > span.er {
+  color: #ff0000;
+  font-weight: bold;
+}
+/* Error */
+code > span.wa {
+  color: #60a0b0;
+  font-weight: bold;
+  font-style: italic;
+}
+/* Warning */
+code > span.cn {
+  color: #880000;
+}
+/* Constant */
+code > span.sc {
+  color: #4070a0;
+}
+/* SpecialChar */
+code > span.vs {
+  color: #4070a0;
+}
+/* VerbatimString */
+code > span.ss {
+  color: #bb6688;
+}
+/* SpecialString */
+/* Import */
+code > span.va {
+  color: #19177c;
+}
+/* Variable */
+code > span.cf {
+  color: #007020;
+  font-weight: bold;
+}
+/* ControlFlow */
+code > span.op {
+  color: #666666;
+}
+/* Operator */
+/* BuiltIn */
+/* Extension */
+code > span.pp {
+  color: #bc7a00;
+}
+/* Preprocessor */
+code > span.at {
+  color: #7d9029;
+}
+/* Attribute */
+code > span.do {
+  color: #ba2121;
+  font-style: italic;
+}
+/* Documentation */
+code > span.an {
+  color: #60a0b0;
+  font-weight: bold;
+  font-style: italic;
+}
+/* Annotation */
+code > span.cv {
+  color: #60a0b0;
+  font-weight: bold;
+  font-style: italic;
+}
+/* CommentVar */
+code > span.in {
+  color: #60a0b0;
+  font-weight: bold;
+  font-style: italic;
+}
+/* Information */
+/* allow R chunks to render in a large font */
+pre.sourceCode {
+  padding: 15px 0 15px 75px;
+  border-style: solid;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+  border-left-width: 0;
+  border-color: #e6e6e6;
+  background-color: #e6e6e6 ;
+  margin: 30px 150px 30px 0px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 0;
+}
+code.sourceCode {
+  font-size: 18pt;
+  border: none;
+  font-weight: 500;
+}
+.sourceCode code {
+  font-size: 0.9em;
+  font-family: 'Source Code Pro', 'Courier New', monospace;
+  font-weight: bold;
+  padding: .1em .3em .1em 0;
+  border-radius: .3em;
+  vertical-align: 10%;
+  color: black;
+}
+p code {
+  color: red;
+  padding: 4px 6px;
+  background-color: #e6e6e6;
+  border: solid #e6e6e6 1px;
+  border-radius: .25em;
+}
+li code {
+  color: red;
+  padding: 4px 6px;
+  background-color: #e6e6e6;
+  border: solid #e6e6e6 1px;
+  border-radius: .25em;
+}
+table {
+  border-collapse: -moz-initial;
+  border-collapse: initial;
+  border-spacing: 2px;
+  border-bottom: 1px solid #797979;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+/* line 479, scss/default.scss */
+table tr > td:first-child,
+table th {
+  font-weight: bold;
+  font-size: 22;
+}
+/* line 484, scss/default.scss */
+table tr:nth-child(odd) {
+  background-color: #e6e6e6;
+}
+/* line 488, scss/default.scss */
+table th {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(40%, #4387fd), color-stop(80%, #2a7cdf)) no-repeat;
+  background: -webkit-linear-gradient(top, #4387fd 40%, #2a7cdf 80%) no-repeat;
+  background: -moz-linear-gradient(top, #4387fd 40%, #2a7cdf 80%) no-repeat;
+  background: -o-linear-gradient(top, #4387fd 40%, #2a7cdf 80%) no-repeat;
+  background: linear-gradient(top, #4387fd 40%, #2a7cdf 80%) no-repeat;
+  color: #FFF;
+  padding: 0.25em 0.25em;
+  font-weight: bold;
+  font-size: 18pt;
+}
+/* line 494, scss/default.scss */
+table td {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 0.25em 0.25em;
+}
+/* line 499, scss/default.scss */
+table td.highlight {
+  color: #515151;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(40%, #ffd14d), color-stop(80%, #f6c000)) no-repeat;
+  background: -webkit-linear-gradient(top, #ffd14d 40%, #f6c000 80%) no-repeat;
+  background: -moz-linear-gradient(top, #ffd14d 40%, #f6c000 80%) no-repeat;
+  background: -o-linear-gradient(top, #ffd14d 40%, #f6c000 80%) no-repeat;
+  background: linear-gradient(top, #ffd14d 40%, #f6c000 80%) no-repeat;
+}
+/* line 504, scss/default.scss */
+table.rows {
+  border-bottom: none;
+  border-right: 1px solid #797979;
+}
+.example {
+  border-style: solid;
+  border-width: 0 15px 1px 15px;
+  border-color: #2C3E50;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+table.example {
+  width: 80%;
+}
+/* Data Table CSS Settings */
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled,
+table.dataTable thead th {
+  color: #515151;
+  background-color: #FFF;
+  font-weight: bold;
+  font-size: 18pt;
+}
+table.dataTable th {
+  background: #FFF;
+}
+table.dataTable.row-border tbody th,
+table.dataTable.row-border tbody td,
+table.dataTable.display tbody th,
+table.dataTable.display tbody td {
+  font-size: 14pt;
+}
+/* line 479, scss/default.scss */
+table.dataTable tr > td:first-child,
+table.dataTable th {
+  font-weight: bold;
+  font-size: 22;
+}
+/* line 488, scss/default.scss */
+/* line 494, scss/default.scss */
+table.dataTable td {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 0.25em 0.25em;
+}
+/* line 499, scss/default.scss */
+table.dataTable td.highlight {
+  color: #515151;
+  background-color: #FFF;
+}
+.dataTables_wrapper {
+  margin-top: 50px;
+}
+.slide.section.level1 {
+  padding-top: 65px;
+}
+.caption {
+  font-size: 70%;
+}
+iframe {
+  border-width: 0px !important;
+  margin-top: 30px !important;
+}
+/* CSS Rules for tutor output */
+.tutor-exercise-input .btn-xs {
+  font-size: 22px;
+  width: auto;
+}
+.tutor-panel-heading {
+  font-size: 25px;
+}
+.ace_editor {
+  font: 18px / normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+}

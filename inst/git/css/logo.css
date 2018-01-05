@@ -1,0 +1,8 @@
+/* fdsfsdf */
+
+body:after {
+content: url(../images/afit-dsl_small.png);
+position: fixed;
+bottom: 0.75em;
+left: 0.75em;
+}

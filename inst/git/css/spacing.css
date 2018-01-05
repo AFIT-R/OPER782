@@ -1,0 +1,25 @@
+/* fdsfsdf */
+
+.reveal li {
+  
+padding-bottom: 25px !important;
+}
+
+#two-cols {
+   width:90%;
+   margin:0 auto;
+}
+#left_col {
+   float:left;
+   width:50%;
+}
+#right_col {
+   float:right;
+   width:50%;
+}
+
+ .col2 {
+    columns: 2 200px;  /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }

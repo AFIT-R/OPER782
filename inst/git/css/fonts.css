@@ -1,0 +1,23 @@
+/* fdsfsdf */
+
+.reveal h1, .reveal h2, .reveal h3 , .reveal h4 {
+  
+font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+.reveal h1, .reveal h2 {
+  
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hover{ 
+  color: blue; 
+  text-decoration: underline;
+}
+.hover:hover {
+  opacity: 0;
+}
+
+.reveal a {
+  color: blue !important;
+}
