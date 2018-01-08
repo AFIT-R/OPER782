@@ -31,7 +31,7 @@ scores <-
 "William Sevier",    10,  17,
 "Matthew Small",     00,  00,
 "Jeffrey Smith",     27,  24,
-"Sean Stuntz",       00,  00,
+"Sean Stuntz",       32,  28,
 "Alexander Trigo",   27,  16,
 "Nicolas Uhorchack", 00,  00
 )
