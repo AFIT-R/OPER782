@@ -26,7 +26,7 @@ scores <-
 "James Gallagher",   00,  00,
 "Jake Johnson",      00,  00,
 "Anthony Kallhoff",  00,  00,
-"Evan Munson",       00,  00,
+"Evan Munson",       14,  28,
 "Rachel Ramirez",    00,  00,
 "William Sevier",    00,  00,
 "Matthew Small",     00,  00,
