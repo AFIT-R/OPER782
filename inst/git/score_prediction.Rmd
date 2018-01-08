@@ -22,7 +22,7 @@ scores <-
 ~Name,              ~AL, ~GA,
 "Jason Freels",      21,  31,
 "Spencer Butt",      24,  17,
-"Jacob Elliott",     00,  00,
+"Jacob Elliott",     56,  07,
 "James Gallagher",   23,  17,
 "Jake Johnson",      18,  21,
 "Anthony Kallhoff",  38,  31,
