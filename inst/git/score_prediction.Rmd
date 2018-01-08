@@ -27,7 +27,7 @@ scores <-
 "Jake Johnson",      18,  21,
 "Anthony Kallhoff",  00,  00,
 "Evan Munson",       14,  28,
-"Rachel Ramirez",    00,  00,
+"Rachel Ramirez",    30,  18,
 "William Sevier",    10,  17,
 "Matthew Small",     00,  00,
 "Jeffrey Smith",     27,  24,
