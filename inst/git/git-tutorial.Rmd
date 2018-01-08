@@ -257,6 +257,7 @@ git config --global user.email auburngrads@live.com
 
 ## The basic Git commands you'll use/need <!--Ramirez/Sevier-->
 
+
 <!--
 - `cd` (change directories)
 - `git init` (initialize a folder as a Git repo)
