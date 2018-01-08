@@ -1,0 +1,42 @@
+div.slide.titlepage {
+  text-align: left;
+  font-weight: normal;
+  font-size: 24pt;
+  line-height: 150%;
+  background: url(https://www.r-project.org/logo/Rlogo.svg);
+    background-repeat: no-repeat;
+    background-position: 85% 8%;
+    background-attachment: relative;
+  background-size: 23%;
+  color: #2C3E50;
+}
+
+div.slide.titlepage h1.title {
+  margin-top: 23.75%;
+  padding-top: 0;
+  color: #2C3E50;
+  padding-left: 36px;
+  margin-right: 0;
+  border-bottom: none;
+  background: none;
+  font-size: 48pt;
+  font-weight: bold;
+  text-transform: capitalize;
+  position: relative;
+
+}
+
+div.slide.titlepage h1.subtitle {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 36px;
+  padding-top: 10px;
+  color: #2C3E50;
+  font-size: 30pt;
+  background: none;
+  text-transform: capitalize;
+  position: relative;
+}
+.slide.titlepage p {
+  color: #2C3E50;
+}
