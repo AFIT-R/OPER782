@@ -33,7 +33,7 @@ scores <-
 "Jeffrey Smith",     00,  00,
 "Sean Stuntz",       00,  00,
 "Alexander Trigo",   00,  00,
-"Nicolas Uhorchack", 24,  28
+"Nicholas Uhorchak", 24,  28
 )
 ```
 
