@@ -255,6 +255,7 @@ git config --global user.email auburngrads@live.com
 - Send pull requests to collaborate with other users
 - Check out the [Git Flow interactive](https://guides.github.com/introduction/flow/)
 
+
 ## The basic Git commands you'll use/need <!--Ramirez/Sevier-->
 
 <!--
