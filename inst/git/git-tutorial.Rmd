@@ -195,6 +195,7 @@ git config --global user.email auburngrads@live.com
     
     + You should understand what a VCS is, what types of VCS exist, and how they differ
 
+
 # Understanding Version Control Systems
 
 ## What are version control systems? <!--Butt-->
