@@ -16,6 +16,7 @@ graphics: yes
 ```{r setup, echo=FALSE}
 knitr::opts_chunk$set(echo = FALSE, fig.align = 'center')
 shiny::includeCSS("css/flatly-style.css")
+shiny::includeCSS("css/r-title.css")
 shiny::includeScript("js/jquery.min.js")
 shiny::includeScript("js/jkf-scroll.js")
 ```
@@ -23,6 +24,8 @@ shiny::includeScript("js/jkf-scroll.js")
 ## This presentation covers the following concepts
 
 - Getting started with Git and Github
+
+- Why you should use Git & Github
 
 - The basics of version control systems
 
@@ -32,13 +35,13 @@ shiny::includeScript("js/jkf-scroll.js")
 
 ## What is Git?
 
-- A <u>decentralized</u> version control system that's free and open source
+- A tool invented by Linus Torvalds (and the Linux development community) to develop the Linux kernel in 2005
+
+- A <u>distributed</u> version control system that's free and open source
 
 - An excellent way to track and coordinate file changes among many people
 
-- A filing system for every draft of a document
-
-- A tool invented by Linus Torvalds (and the Linux development community) to develop the Linux kernel in 2005
+- A system for filing every draft of every document in a project
 
 - The most widely used modern version control system in the world -- <focus>by far</focus>
 
@@ -54,7 +57,7 @@ shiny::includeScript("js/jkf-scroll.js")
 
 ## What is GitHub?
 
-- A code sharing and publishing service
+- A hosting service for sharing and publishing documents
 
 - A social networking site for programmers
 
@@ -74,9 +77,15 @@ shiny::includeScript("js/jkf-scroll.js")
     
     + A [martketplace](https://github.com/marketplace) of integrations for many 3^rd^ party services
     
-    + Issues!
+    + [Issues!](https://guides.github.com/features/issues/)
     
-    + Forking!
+    + [Forking!](https://guides.github.com/activities/forking/)
+    
+    + [Projects!](https://help.github.com/articles/about-project-boards/)
+    
+    + [Wikis!](https://help.github.com/articles/about-github-wikis/)
+    
+    + [Pages!](https://pages.github.com/)
 
 # Why Should You use Git and GitHub?
 
@@ -176,7 +185,7 @@ git config --global user.email auburngrads@live.com
 
 - Since you passed the option `--global`, you only need to do this once!
 
-- Now your all set up to use Git & Github!
+## Now your all set up to use Git & Github!
 
 - <focus>However</focus> - before we dive too deep into Git, we need to take a step back 
 
@@ -188,8 +197,6 @@ git config --global user.email auburngrads@live.com
 
 # Understanding Version Control Systems
 
-## The Basics of Version Control Systems
-
 ## What are version control systems? <!--Butt-->
 
 ## Why should some use a version control system? <!--Elliot-->
@@ -200,19 +207,17 @@ git config --global user.email auburngrads@live.com
 
 ## What are the advantages of using a DVCS instead of a CVCS? <!--Uhorchak-->
 
-
-
 # Using Git - Overview
 
-## Expectation management - this tutorial won't cover all use cases
+## Expectation management - this tutorial won't cover all use-cases
 
 - New users often struggle learning how to use Git and conclude that it's too hard
 
-- This misconception is driven by the fact that there seems to be an endless number of use cases
+- This struggle is driven by the fact that there seems to be an endless number of use cases
 
 - The issue is NOT that Git is too <u>hard</u> to learn, rather Git is too <u>big</u> to learn
 
-- The fact that Github adds it's own functions makes things even bigger and more complicated
+- The fact that Github adds it's own functions makes things even more complicated
 
 - Remember <focus>Git $\ne$ Github</focus>
 
@@ -245,13 +250,14 @@ git config --global user.email auburngrads@live.com
 - Check the status of file changes in the directory
 - Add changed files to the staging area
 - Commit one or changed files to be updated
-- Push commits to the master
-- Send pull requests to collaborate with other users
 - Add a remote for hosting the files at a URL
+- Push commits to the remote
+- Send pull requests to collaborate with other users
 - Check out the [Git Flow interactive](https://guides.github.com/introduction/flow/)
 
 ## The basic Git commands you'll use/need <!--Ramirez/Sevier-->
 
+<!--
 - `cd` (change directories)
 - `git init` (initialize a folder as a Git repo)
 - `git add <file-name>` (start tracking a new file)
@@ -260,8 +266,9 @@ git config --global user.email auburngrads@live.com
 - `git push origin master` (push your master branch to your origin server)
 - `git pull origin master` (update your local repo)
 **Tip\:** Typing `git add --all` will start tracking everything (this is how I almost always use `git add`).
+-->
 
-# Using Git commands
+# Using Git - Example commands
 
 - Initialize a repo in an existing directory
 
@@ -280,7 +287,7 @@ add <- function(x, y) { x * y }
 - For example, the code below takes me to the folder called `arithmetic` on my Desktop
 
 ```{sh, echo=TRUE, eval=F}
-cd C:/Users/greenweb/Desktop/arithmetic
+cd C:/Users/Aubur/Desktop/arithmetic
 ```
 
 - Then, to initialize this as a Git repo, just type
@@ -289,11 +296,11 @@ cd C:/Users/greenweb/Desktop/arithmetic
 git init
 ```
 
-- This add a new directory called `.git` within the arithmetic project directory
+- This add a new directory called `.git` within the `arithmetic` project directory
 
-- If you want to start version controlling all the files, you need to start tracking them. In the terminal, type the following:
+- If you want to start version-controlling all the files, you need to start tracking them. In the terminal, type the following:
 
-```{sh, eval=F}
+```{sh, eval=F, echo=T}
 git add --all
 ```
 
@@ -301,7 +308,7 @@ git add --all
 
 - Then type the following to commit the file changes 
 
-```{sh, eval=F}
+```{sh, eval=F, echo=T}
 git commit -m "first commit"
 ```
 
@@ -311,15 +318,15 @@ git commit -m "first commit"
 
 ## Overview
 
-- Often you'll want to host a local Git repo on Github to use the collaboration tools
+- Often, you'll want to host a local Git repo on Github to use the collaboration tools
 
-- To do this we'll first need to create a new repo on Github
+- To do this, we'll first need to create a new repo on Github
 
 ```{r, out.width = "600px"}
 knitr::include_graphics("images/new-repo.png")
 ```
 
-- The name of the Github repo doesn't have to be the same as that of the local repo, but it should 
+- The name of the Github repo doesn't have to be the same as that of the local repo, but it probably should 
 
 ```{r, out.width = "600px"}
 knitr::include_graphics("images/new-repo-2.png")
@@ -339,18 +346,20 @@ knitr::include_graphics("images/new-repo-3.png")
 knitr::include_graphics("images/new-repo-4.png")
 ```
 
+## Working with Github remotes <!--Smith-->
+
 # Using Git - Making changes and pushing them to GitHub
 
-## Fix the typo
+## Fixing the typo
 
-- The function in the `add.R` file contained a typo
+- The function in the `add.R` file contained an obvious typo
 
-- First, let's fix the obvious typo in `add.R`
+- First, let's fix the typo in `add.R`
 
 - Now if we run status it should show that one file has been modified 
 - Then, take a snapshot (i.e., `git add/commit`) and push the changes to GitHub (i.e., `git push`)!
 
-```{sh, eval=F}
+```{sh, eval=F, echo=T}
 git add --all
 git commit -m "fix typo"
 git push origin master
