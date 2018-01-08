@@ -23,7 +23,7 @@ scores <-
 "Jason Freels",      21,  31,
 "Spencer Butt",      00,  00,
 "Jacob Elliott",     00,  00,
-"James Gallagher",   00,  00,
+"James Gallagher",   23,  17,
 "Jake Johnson",      00,  00,
 "Anthony Kallhoff",  00,  00,
 "Evan Munson",       00,  00,
