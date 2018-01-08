@@ -29,7 +29,7 @@ scores <-
 "Evan Munson",       14,  28,
 "Rachel Ramirez",    30,  18,
 "William Sevier",    10,  17,
-"Matthew Small",     00,  00,
+"Matthew Small",     21,  24,
 "Jeffrey Smith",     27,  24,
 "Sean Stuntz",       32,  28,
 "Alexander Trigo",   27,  16,
