@@ -258,7 +258,6 @@ git config --global user.email auburngrads@live.com
 
 ## The basic Git commands you'll use/need <!--Ramirez/Sevier-->
 
-<!--
 - `cd` (change directories)
 - `git init` (initialize a folder as a Git repo)
 - `git add <file-name>` (start tracking a new file)
@@ -267,7 +266,6 @@ git config --global user.email auburngrads@live.com
 - `git push origin master` (push your master branch to your origin server)
 - `git pull origin master` (update your local repo)
 **Tip\:** Typing `git add --all` will start tracking everything (this is how I almost always use `git add`).
--->
 
 # Using Git - Example commands
 
