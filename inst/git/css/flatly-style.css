@@ -981,7 +981,7 @@ code > span.in {
 /* Information */
 /* allow R chunks to render in a large font */
 pre.sourceCode {
-  padding: 15px 0 15px 75px;
+  padding: 15px 0 15px 120px;
   border-style: solid;
   border-top-width: 1px;
   border-bottom-width: 1px;
@@ -1001,7 +1001,7 @@ code.sourceCode {
   font-weight: 500;
 }
 .sourceCode code {
-  font-size: 0.9em;
+  font-size: 1.2em;
   font-family: 'Source Code Pro', 'Courier New', monospace;
   font-weight: bold;
   padding: .1em .3em .1em 0;
