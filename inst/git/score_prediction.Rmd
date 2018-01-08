@@ -21,18 +21,18 @@ scores <-
   tibble::tribble(
 ~Name,              ~AL, ~GA,
 "Jason Freels",      21,  31,
-"Spencer Butt",      00,  00,
+"Spencer Butt",      24,  17,
 "Jacob Elliott",     00,  00,
 "James Gallagher",   23,  17,
-"Jake Johnson",      00,  00,
+"Jake Johnson",      18,  21,
 "Anthony Kallhoff",  00,  00,
-"Evan Munson",       00,  00,
+"Evan Munson",       14,  28,
 "Rachel Ramirez",    00,  00,
-"William Sevier",    00,  00,
+"William Sevier",    10,  17,
 "Matthew Small",     00,  00,
-"Jeffrey Smith",     00,  00,
+"Jeffrey Smith",     27,  24,
 "Sean Stuntz",       00,  00,
-"Alexander Trigo",   00,  00,
+"Alexander Trigo",   27,  16,
 "Nicolas Uhorchack", 00,  00
 )
 ```
