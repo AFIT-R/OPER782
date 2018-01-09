@@ -7,7 +7,7 @@ output:
     df_print: 'kable'
 params:
   AL: 26
-  GA: 20
+  GA: 23
 ---
 
 ```{r setup}
