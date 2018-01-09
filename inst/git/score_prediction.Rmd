@@ -6,8 +6,8 @@ output:
   html_document:
     df_print: 'kable'
 params:
-  AL: 24
-  GA: 14
+  AL: 26
+  GA: 20
 ---
 
 ```{r setup}
@@ -38,8 +38,8 @@ scores <-
 ```
 
 ```{r, echo=FALSE}
-diff <- (scores$AL - params$AL) + (scores$GA - params$GA)
+scores$diff <- abs(scores$AL - params$AL) + abs(scores$GA - params$GA)
 
-scores$rank <- rank(diff)
-scores
+scores$rank <- rank(scores$diff)
+scores[order(scores$rank),]
 ```
