@@ -175,7 +175,7 @@ knitr::include_graphics("images/my-profile.png")
     + You need modify the `global` Git configuration file to tell Git who you are
     + Open a terminal or Git Bash (Windows) and enter the following two lines: (with the obvious modifications) 
     
-```{sh, eval=!TRUE}
+```{sh, eval=!TRUE, echo=T}
 # Use Github username 
 git config --global user.name Auburngrads
 
