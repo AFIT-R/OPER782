@@ -34,7 +34,6 @@ scores <-
 "Sean Stuntz",       32,  28,
 "Alexander Trigo",   27,  16,
 "Nicholas Uhorchak", 24,  28
-
 )
 ```
 
