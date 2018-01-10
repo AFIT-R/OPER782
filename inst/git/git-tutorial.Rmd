@@ -172,7 +172,7 @@ knitr::include_graphics("images/my-profile.png")
 
 - After installing Git and setting up a Github account
 
-    + You need modify the `global` Git configuration file to tell Git who you are
+    + You need modify the global Git configuration file to tell Git who you are
     + Open a terminal or Git Bash (Windows) and enter the following two lines: (with the obvious modifications) 
     
 ```{sh, eval=!TRUE, echo=T}
@@ -185,7 +185,7 @@ git config --global user.email auburngrads@live.com
 
 - Since you passed the option `--global`, you only need to do this once!
 
-## Now your all set up to use Git & Github!
+## Now you're all set up to use Git & Github!
 
 - <focus>However</focus> - before we dive too deep into Git, we need to take a step back 
 
@@ -265,7 +265,6 @@ git config --global user.email auburngrads@live.com
 - `git clone` (clone/copy another Git repo [e.g., from GitHub])
 - `git push origin master` (push your master branch to your origin server)
 - `git pull origin master` (update your local repo)
-**Tip\:** Typing `git add --all` will start tracking everything (this is how I almost always use `git add`).
 
 # Using Git - Example commands
 
