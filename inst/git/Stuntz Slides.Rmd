@@ -1,0 +1,22 @@
+---
+title: "Github Account Creation"
+author: "Sean Stuntz"
+date: "January 9, 2018"
+output: ioslides_presentation
+---
+
+## Github Website and First Time Use
+- [Follow Link](github.com)
+- Create a Username and Password 
+- Click the big green "Sign Up for Github" button
+- Validate your email address
+
+## Profile Attributes
+* Avatar or Icon
+    + On your account homepage, go to the "Profile" tab and click "Upload new picture"
+* Email Address
+    + Github maps commits to your user by email address
+    + On the "Emails" tab, you're able to assign primary and alternate email addresses
+* Two Factor Authentication
+    + Under the "Security" tab, you can set up 2FA
+    + You can configure either a time based one-time password using a phone app or a code sent to your cell phone via SMS
