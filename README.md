@@ -1,7 +1,7 @@
 OPER782
 ================
 Jason Freels
-17 January 2018
+21 January 2018
 
 <!--don't edit README.md go to README.Rmd instead-->
 <ol>
