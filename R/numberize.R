@@ -8,7 +8,11 @@
 #'
 #' @return a data frame
 #'
-#' @example numberize(iris)
+#' @examples
+#'
+#' \dontrun{
+#' numberize(iris)
+#' }
 #'
 #' @export
 
