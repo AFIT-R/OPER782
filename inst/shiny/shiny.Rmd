@@ -1,0 +1,362 @@
+---
+title: "Interactive Visualizations with Shiny"
+author: "Jason Freels"
+date: "March 28, 2017"
+output: 
+  html_document:
+    df_print: paged
+---
+
+<style>
+.pagedtable table { font-size: 1.25em !important; }
+p code, h3 code, li code, blockquote code { 
+              color: #c7254e !important;
+              font-weight: bold !important; } 
+     p { font-size: 1.5em !important; }
+.main-container { max-width: 70% }
+pre.r { padding: 15px; margin: 30px 0; font-size: 1.5em !important; font-weight: bold !important;}
+ ol li { font-size: inherit;}
+ ul li { font-size: 1.25em; }
+ a { font-weight: bold; }
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = F, warning = F)
+pacman::p_load(knitcitations)
+knitcitations::cite_options(cite.style = 'numeric')
+```
+
+## Introduction
+
+`shiny` `r knitcitations::citep(citation(package = 'shiny'))` is a software package for creating web applications using the R programming environment `r knitcitations::citep(citation())`.  The shiny package makes it easy to build interactive web applications within R by creating automatic "reactive" bindings between inputs and outputs.  
+Visualize data or concepts, reduce the number of plots required to convey a message.
+
+## Additional Resources
+
+- __RStudio Shiny Gallery__<br/><http://shiny.rstudio.com/gallery>
+
+- __Shiny User Showcase__<br/><https://www.rstudio.com/products/shiny/shiny-user-showcase/>
+
+- __Show Me Shiny__<br/><https://www.showmeshiny.com>
+
+- __Shiny documentation__<br/> <https://cran.r-project.org/web/packages/shiny/index.html>
+
+- __R-bloggers__<br/><http://www.r-bloggers.com/>
+
+- __Shiny Google Group__<br/><https://groups.google.com/forum/#!forum/shiny-discuss/>
+
+- __Shiny GitHub Page__<br/><https://github.com/rstudio/shiny>
+
+## Background
+
+A shiny app object is created by using the function `shinyApp(ui, server)` where 
+
+- `ui` defines the interface with which a user will interact 
+
+- `server` outlines how the app responds to each user input 
+
+This tutorial will walk through the process of creating an app called `myfirstApp` that will display US census data on a map of the United States.  The app shown is below -- note that this app can also be accessed [here](https://afit.shinyapps.io/myfirstApp/)
+
+```{r, out.width='100%',echo=FALSE}
+knitr::include_app('https://afit.shinyapps.io/myfirstApp/', height = '600px')
+```
+
+Most shiny apps begin with a plot, that we would like to update.  For this app we want to update a map of US Census Data using the `choroplethr` and `choroplethrMaps` packages.  An example of the image and the code used to produce it are shown below.
+
+```{r, fig.align='center'}
+library(choroplethr)
+library(choroplethrMaps)
+
+data('df_state_demographics')
+map_data <- df_state_demographics
+
+map_data$value = map_data[, 2]
+    
+    state_choropleth(df = map_data,
+                     title = colnames(map_data)[2], 
+                     num_colors = 7)
+```
+
+The map is produced using the `state_choropleth` function. The documentation for this function states that the first argument should be a data.frame with columns named `region` and `value`.  Observing the dataset (shown below) we see the first column is named `region` but there are no columns named `value`.  
+
+```{r, echo=FALSE}
+map_data
+```
+
+We can fix this by adding a new column to the data.frame called `value` which is a copy one of the existing columns.  For this app we want to be able to automatically change the `df`, `title`, and `num_colors` arguments which, in turn, will update the plot. 
+
+## Creating the App
+
+Our first step, will be to create a new directory called 'myfirstApp' to house the files needed to render the app. After creating the 'myfirstApp' directory you'll need to create three new R-Script files named `global.R`, `ui.R`, and `server.R`, respectively.  Note, these files MUST be named `global.R`, `ui.R`, and `server.R`, don't deviate from this!  To create these files within RStudio, press the green plus sign icon (near the top left) and select 'R script'.  These files must be saved within the `myfirstApp` directory.  For now, it's fine that these files are empty.  When we're finished they will contain the global objects used by the app along with the `ui` and `server` objects.  The content to be placed in each of these file is described in the corresponding sections below.
+
+### The `global.R` file
+
+Before presenting the content that should be entered into the `global.R` file, it's important to discuss some of the basic <focus>scoping rules</focus> that govern how a shiny app is rendered.  
+
+When the `shinyApp(ui, server)` function is called the following steps occur a search is initiated to ensure that two files named `ui.R` and `server.R` exist in the same directory.  If the files <u>**aren't**</u> found, an error is returned.  If the files <u>**are**</u> found a parent environment is created into which the shiny app will be rendered.
+
+Next, a search is initiated for a file called `global.R` within the same directory as the `ui.R` and `server.R` files.  If this file is found, its contents are evaluated using the `source()` function and stored as global objects in the parent environment for the app to use.  Because the `global.R` file is run first, this file is a good place to put `library` calls to load any necessary R packages or call in datasets that the app will need.  For this app, the content of the `global.R` should be as shown in the chunk below. Either write (or paste) the following code into your `global.R` file.
+
+```{r}
+library(shiny)
+library(shinythemes)      # Bootswatch color themes for shiny
+library(choroplethr)      # Creating Choropleth Maps in R
+library(choroplethrMaps)  # Maps used by the choroplethr package
+
+# load the data set from the choroplethrMaps package
+data('df_state_demographics')
+map_data <- df_state_demographics
+```
+
+Entering this code into the `global.R` ensures the needed packages are loaded and stores the needed dataset as an object called `map_data`.  If you do not already have these packages installed, you may do so using the code in the chunk below. 
+
+<blockquote>
+NOTE: You should NOT include calls to `install.packages()` within a shiny app.
+</blockquote>
+
+```{r, eval=FALSE}
+install.packages(c('shiny','shinythemes','choroplethr','choroplethrMaps'))
+```
+
+### The `ui.R` file
+
+The `ui.R` file is where we'll create the user-interface or `ui` to define what the app will look like to potential users.  First, we must choose a page type, this will define the structure of our page.  Shiny provides the following page-type options:
+
+- `fixedPage` - Page with a fixed layout
+- `bootstrapPage` - Page that loads resources for [Bootstrap](http://getbootstrap.com/)
+- `fluidPage` - Page with fluid layout
+- `pageWithSidebar` - Page containing a header, a sidebar for input controls, and a main area for output.
+- `basicPage` - Same as `bootstrapPage`
+- `navbarPage` - Page with a top level navigation bar and subpanels
+- `fillPage` - Page whose height and width always fill the available area of the browser window
+
+Alternatively, other packages have been developed to provide additional page frameworks, the most popular ones are `shinydashboard` and `flexdashboard`.
+
+#### Define the page type
+
+For this app we'll use a `fluidPage`. Under this page structure a basic skeleton of the `ui` object would appear as follows.
+
+```{r, eval=FALSE}
+ui <- fluidPage(...,               # elements of the app
+                title = NULL,      # browser window title
+                responsive = NULL, # deprecated with Bootstrap 3
+                theme = NULL)      # Bootstrap stylesheet
+
+```
+
+Within a `fluidPage` structure we have several options to choose from for configuring the app's layout.  One popular layout option is `sidebarLayout`, which divides the page into two sections: a `sidebarPanel` and a `mainPanel`.  
+
+```{r, eval=FALSE}
+sidebarLayout(sidebarPanel,       # Input controls in the sidebar
+              mainPanel,          # Output appearing in the mainPanel
+              position = c('left','right'), # position of sidebar
+              fluid = TRUE)       # Use fluid or fixed layout
+```
+
+Adding this sidebarLayout structure to our page fluidPage results in the updated `ui` object as shown below. Note that I've removed some of the arguments that have default values and don't need to be specified. Also,
+you'll note that I've specified a bootswatch color theme for the app using the `shinythemes` package.  Additional bootswatch color themes can be viewed at [__https://bootswatch.com/__](https://bootswatch.com/) 
+
+```{r, eval=FALSE}
+ui <- fluidPage(title = 'My First App!', 
+                theme = shinythemes::shinytheme('flatly'),
+          sidebarLayout(sidebarPanel,       
+                        mainPanel))
+```
+
+The input control elements presented to the user are contained within the sidebarPanel are defined by the function `sidebarPanel()`.  The output to be shown in the mainPanel is defined by the function `mainPanel()`.  Adding these functions results in the updated `ui.R` object below.  Note that the `width` arguments for both `sidebarPanel()` and `mainPanel()` must be integers and their sum should no more that 12.
+
+```{r, eval=FALSE}
+ui <- fluidPage(title = 'My First App!',
+                theme = shinythemes::shinytheme('flatly'),
+          sidebarLayout(
+            sidebarPanel(width = 3, ...),       
+               mainPanel(width = 9, ...)))
+```
+
+Now, we have the basic structure of a `ui`.  All that's left to be added are the different types of input controls and the type of output. Let's first look at the different types of input elements the can be used.  Shiny provides many different types of input controls, some of which are listed below.
+
+- `passwordInput`
+- `checkboxInput`       
+- `fileInput`
+- `textAreaInput`
+- `selectInput`
+- `textInput`
+- `dateInput`
+- `selectizeInput`
+- `sliderInput`
+- `numericInput`
+- `dateRangeInput`
+- `checkboxGroupInput`
+
+For this first app we'll use the `selectInput` and `sliderInput` controls. The options for each of these controls are shown in the chunks below.
+
+```{r, eval=FALSE}
+selectInput(inputId,          # id called by the server
+            label,            # test shown to the user
+            choices,          # choices to select from
+            selected = NULL,  # which choice is selected on start-up 
+            multiple = FALSE, # can multiple options be selected?
+            selectize = TRUE, # use selectize.js
+            width = NULL,     # width of the input
+            size = NULL)      # how many options to show
+
+
+sliderInput(inputId,          # id called by the server
+            label,            # test shown to the user
+            min,              # min value of the slider
+            max,              # max value of the slider
+            value,            # default value upon startup
+            step = NULL,      # increment value
+            round = FALSE,    # control to round values
+            format = NULL,    # deprecated
+            locale = NULL,    # deprecated
+            ticks = TRUE,     # show tick marks?
+            animate = FALSE,  # play through values
+            width = NULL,     # width of control
+            sep = ",",        # separator between thousands
+            pre = NULL,       # prefix before values
+            post = NULL,      # suffix string after values
+            timeFormat = NULL,# time format for POSIX objects 
+            timezone = NULL,  # time zone for POSIX objects
+            dragRange = TRUE) # drag min & max together
+```
+
+
+```{r, echo=FALSE, purl=FALSE}
+inp <- grep('input', tolower(getNamespaceExports('shiny')))
+upd <- grep('update',tolower(getNamespaceExports('shiny')[inp]))
+```
+
+For this app, update your ui with the following controls:
+
+```{r, eval=FALSE}
+ui <- fluidPage(title = 'My First App!',
+                theme = shinythemes::shinytheme('flatly'),
+                
+          sidebarLayout(
+             sidebarPanel(width = 3,
+               sliderInput("num_colors",
+                           label = "Number of colors:",
+                           min = 1,
+                           max = 9,
+                           value = 7),
+               selectInput("select", 
+                           label = "Select Demographic:", 
+                           choices = colnames(map_data)[2:9], 
+                           selected = 1)),
+             
+             mainPanel(width = 9, ...)))
+```
+
+Now, the sidebar panel is complete - we just need to define the content to be shown in the mainPanel. First, note that the mainPanel includes two tabs that allow us switch between outputs, this is called a `tabsetPanel`.  The `tabsetPanel` container exists inside the mainPanel container and allows users to switch between outputs - where each output is stored in its own `tabPanel` container.  To add the tabsetPanel and complete the `ui` add the following code to your app.    
+
+```{r, eval=FALSE}
+ui <- fluidPage(title = 'My First App!',
+                theme = shinythemes::shinytheme('flatly'),
+                
+          sidebarLayout(
+             sidebarPanel(width = 3,
+               sliderInput("num_colors",
+                           label = "Number of colors:",
+                           min = 1,
+                           max = 9,
+                           value = 7),
+               selectInput("select", 
+                           label = "Select Demographic:", 
+                           choices = colnames(map_data)[2:9], 
+                           selected = 1)),
+             
+             mainPanel(width = 9, 
+                 tabsetPanel( 
+                   tabPanel(title = 'Output Map', 
+                            plotOutput(outputId = "map")),
+                   tabPanel(title = 'Data Table', 
+                            dataTableOutput(outputId = 'table'))))))
+```
+
+
+### The `server.R` file
+
+The `server.R` file is where the app's server object is defined.  The server object defines the logic such that the app's output responds to changes made by the user in the ui.  The server object is a function taking three formal arguments `input`, `output`, and `session`.  The shell of a server object is shown in the code chunk below.  Type (or paste) the code below into your `server.R` file.   
+
+```{r, eval=FALSE}
+server <- function(input, output, session) {
+
+
+}
+```
+
+Recall that in the `ui.R` file we defined two outputs (1) A `plotOutput` with `outputID = 'maps'` and (2) a `dataTableOutput` with `outputID = 'table'`.
+
+We need to connect each `outputID` with the corresponding type of output that was defined in the ui.  This is shown in the code chunk below
+
+```{r, eval=FALSE}
+server <- function(input, output, session) {
+
+  output$map <- renderPlot({
+
+})
+  
+  output$table <- renderDataTable({
+   
+})
+}
+```
+
+Next, we need to insert the code for what is actually going to happen when a change is made on the ui.  In the code chunk below I've pasted the code used to create the initial map above into `renderPlot` and the data set itself into `renderDataTable`.
+
+```{r, eval=FALSE}
+server <- function(input, output, session) {
+
+  output$map <- renderPlot({
+
+   map_data$value = map_data[, 2]
+    
+    state_choropleth(df = map_data,
+                     title = colnames(map_data)[2], 
+                     num_colors = 7)
+})
+  
+  output$table <- renderDataTable({
+   
+    map_data
+})
+}
+```
+
+The last step to complete the app is to connect the inputs from the ui to the arguments passed to the `state_choropleth` function.  As all of the inputs are stored as a list named `input` we can call a specific input by `input$inputID`.   When an the value (aka state) of an input is changed any outputs that depend on that input are re-rendered using the current input state.  In your `ui.R` file, you specified two inputs `select` and `num_colors`.  The code chunk below shows how to replace the static values used in the previous code chunk with shiny inputs.  Note that `input$select` has also been used within the call to `renderDataTable` to sort the rows in the table by the specified column.
+
+```{r, eval=FALSE}
+server <- function(input, output) {
+
+  output$map <- renderPlot({
+
+    map_data$value = map_data[, input$select]
+    
+    state_choropleth(map_data,
+                     title = input$select, 
+                     num_colors = input$num_colors)
+})
+  
+  output$table <- renderDataTable({
+   
+    map_data[order(map_data[input$select]), ]
+})
+}
+```
+
+Now that the app is complete - how do you run it?  There are several ways to do so including:
+
+1. Call `shinyApp(ui, server)` specifying the path to both the `ui.R` and `server.R` files.
+
+2. Call `shinyAppDir(appDir)` specifying the path to the directory containing the `ui.R` and `server.R` files.
+
+3. Call `runApp(appDir)` specifying the path to the directory containing the `ui.R` and `server.R` files.
+
+Ok, so now your app has rendered successfully and you're happy with how it looks and how it responds to your inputs.  How do you share it?  There's a number of options for that as well.
+
+1. Save it as a github repo
+
+2. Include it in an R package
+
+3. Publish it to [shinyapps.io](https://www.shinyapps.io)
