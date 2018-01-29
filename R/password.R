@@ -6,7 +6,10 @@
 #'
 #' @return a string
 #'
-#' @example password()
+#' @examples
+#' \dontrun{
+#' password()
+#' }
 #'
 #' @export
 
