@@ -14,3 +14,9 @@ samples with replacement from a group of possible uppercase
 letters, lowercase letters, numbers, and special characters to output a
 string that could be used as a password
 }
+\examples{
+\dontrun{
+password()
+}
+
+}

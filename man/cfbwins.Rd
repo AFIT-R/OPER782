@@ -19,8 +19,9 @@ By stripping data from \link{www.winsipedia.com}, see who leads
 NCAA FBS history in total wins
 }
 \examples{
-cfbwins()
-cfbwins(47)
-cfbwins(school = "Army")
-
+\dontrun{
+ cfbwins()
+ cfbwins(47)
+ cfbwins(school = "Army")
+ }
 }
