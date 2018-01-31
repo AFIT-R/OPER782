@@ -9,9 +9,8 @@
 #' @return a data frame
 #'
 #' @examples
-#'
 #' \dontrun{
-#' numberize(iris)
+#'  numberize(iris)
 #' }
 #'
 #' @export
