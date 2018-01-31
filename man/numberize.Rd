@@ -18,9 +18,8 @@ scale from 0 to 1 and converts all character and factor variables to a
 one-hot encoded structure
 }
 \examples{
-
 \dontrun{
-numberize(iris)
+ numberize(iris)
 }
 
 }
