@@ -8,6 +8,7 @@ Description: This package contains a series of functions that
              will allow students in the OPER 782 class to 
              experience making a pull request, raising an issue, 
              and other GitHub functionality.
+Depends: R (>= 2.10)
 License: GPL (>= 2)
 Imports: rvest, Rcpp (>= 0.12.14)
 LinkingTo: Rcpp 
