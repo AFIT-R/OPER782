@@ -1,0 +1,12 @@
+name: myfirstApp
+title: myfirstApp
+username:
+account: afit
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 197623
+bundleId: 1197618
+url: https://afit.shinyapps.io/myfirstApp/
+when: 1517233315.44851
+asMultiple: FALSE
+asStatic: FALSE

@@ -9,10 +9,11 @@
 #' @return a string
 #'
 #' @examples
-#' cfbwins()
-#' cfbwins(47)
-#' cfbwins(school = "Army")
-#'
+#' \dontrun {
+#'  cfbwins()
+#'  cfbwins(47)
+#'  cfbwins(school = "Army")
+#'  }
 #' @export
 
 cfbwins <- function(rank = NULL, school = "Notre Dame") {
