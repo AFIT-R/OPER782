@@ -9,7 +9,7 @@
 #' @return a string
 #'
 #' @examples
-#' \dontrun {
+#' \dontrun{
 #'  cfbwins()
 #'  cfbwins(47)
 #'  cfbwins(school = "Army")
