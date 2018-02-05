@@ -13,6 +13,7 @@
 #'  numberize(iris)
 #' }
 #'
+#' @importFrom stats as.formula
 #' @export
 
 numberize <- function(df) {
