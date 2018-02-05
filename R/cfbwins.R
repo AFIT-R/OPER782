@@ -8,6 +8,8 @@
 #'
 #' @return a string
 #'
+#' @import rvest
+#' @import xml2
 #' @examples
 #' \dontrun{
 #'  cfbwins()
