@@ -11,7 +11,8 @@ my_gadget(min, max, theme = "flatly")
 
 \item{max}{The maximum x value}
 
-\item{theme}{A \code{character} string for a theme provided by the \code{shinythemes} package}
+\item{theme}{A \code{character} string for a theme provided
+by the \code{shinythemes} package}
 }
 \description{
 This would normally be an exciting description
