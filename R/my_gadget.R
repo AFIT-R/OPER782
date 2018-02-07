@@ -4,7 +4,8 @@
 #'
 #' @param min The minimum x value
 #' @param max The maximum x value
-#' @param theme A \code{character} string for a theme provided by the \code{shinythemes} package
+#' @param theme A \code{character} string for a theme provided
+#'              by the \code{shinythemes} package
 #'
 #' @import shiny
 #' @import metricsgraphics
@@ -130,8 +131,8 @@ server = function(input, output, session) {
 
       })
 }
-shinygadgets::runGadget(app = ui,
+              runGadget(app = ui,
                         server = server,
-                        viewer = shinygadgets::browserViewer(browser = getOption("browser")))
+                        viewer = browserViewer(browser = getOption("browser")))
 
 }
