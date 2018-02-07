@@ -8,8 +8,10 @@
 #'
 #' @return a string
 #'
+#' @import rvest
+#' @import xml2
 #' @examples
-#' \dontrun {
+#' \dontrun{
 #'  cfbwins()
 #'  cfbwins(47)
 #'  cfbwins(school = "Army")

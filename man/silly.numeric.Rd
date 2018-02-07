@@ -4,5 +4,11 @@
 \alias{silly.numeric}
 \title{Invoke s3 silly method for numeric objects}
 \usage{
-\method{silly}{numeric}(x, ...)
+\method{silly}{numeric}(x)
+}
+\arguments{
+\item{x}{A numeric value}
+}
+\description{
+S3 Method for silly applied to numerics
 }
