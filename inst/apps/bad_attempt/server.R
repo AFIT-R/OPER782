@@ -4,8 +4,8 @@ server = function(input, output, session) {
   mu  <- input$mu.n
   sig <- input$sig.n
   t <- signif(digits = 4,
-              seq(min(input$range.n), 
-                  max(input$range.n), 
+              seq(min(input$range.n),
+                  max(input$range.n),
                   length = 500))
 
   CDF <- pnorm(t, mean = mu, sd = sig)
@@ -15,12 +15,12 @@ server = function(input, output, session) {
   HAZ <- -1*log(1-CDF)
   QUANT <- qnorm(p, mean = mu, sd = sig )
   df <- data.frame(Time = t,
-                   PROB = p, 
+                   PROB = p,
                    CDF = CDF,
                    PDF = PDF,
                    REL = REL,
                    haz = haz,
-                   HAZ = HAZ, 
+                   HAZ = HAZ,
                    QUANT = QUANT)
 
 output$norC <- renderMetricsgraphics({
@@ -28,40 +28,40 @@ output$norC <- renderMetricsgraphics({
   mjs_line(area = TRUE) %>%
   mjs_labs(x_label = 'Time (t)', y_label = 'F(t)')%>%
   mjs_add_css_rule("{{ID}} .mg-active-datapoint { font-size: 20pt }")
-}) 
-  
+})
+
 output$norP <- renderMetricsgraphics({
   mjs_plot(df, x = Time, y = PDF, decimals = 4) %>%
   mjs_line(area = TRUE) %>%
   mjs_labs(x_label = 'Time (t)', y_label = 'f(t)') %>%
   mjs_add_css_rule("{{ID}} .mg-active-datapoint { font-size: 20pt }")
 })
-  
+
 output$norR <- renderMetricsgraphics({
   mjs_plot(df, x = Time, y = REL, decimals = 4) %>%
   mjs_line(area = TRUE) %>%
   mjs_labs(x_label = 'Time (t)', y_label = 'S(t)') %>%
   mjs_add_css_rule("{{ID}} .mg-active-datapoint { font-size: 20pt }")
 })
-  
+
 output$norh <- renderMetricsgraphics({
   mjs_plot(df, x = Time, y = haz, decimals = 4) %>%
   mjs_line(area = TRUE) %>%
   mjs_labs(x_label = 'Time (t)', y_label = 'h(t)') %>%
   mjs_add_css_rule("{{ID}} .mg-active-datapoint { font-size: 20pt }")
 })
-  
+
 output$norH <- renderMetricsgraphics({
   mjs_plot(df, x = Time, y = HAZ, decimals = 4) %>%
   mjs_line(area = TRUE) %>%
   mjs_labs(x_label = 'Time (t)', y_label = 'H(t)') %>%
   mjs_add_css_rule("{{ID}} .mg-active-datapoint { font-size: 20pt }")
 })
-  
+
 output$norQ <- renderMetricsgraphics({
   mjs_plot(df, x = PROB, y = QUANT, decimals = 4) %>%
   mjs_line(area = TRUE) %>%
-  mjs_labs(x_label = 'Probability', y_label = 'q(t)') %>%
+  mjs_labs(x_label = 'Probability', y_label = 't(p)') %>%
   mjs_add_css_rule("{{ID}} .mg-active-datapoint { font-size: 20pt }")
 })
 }
