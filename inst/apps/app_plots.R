@@ -11,12 +11,12 @@ haz <- PDF / (1 - CDF)
 HAZ <- -1 * log(1 - CDF)
 QUANT <- qnorm(p, mean = mu.n, sd = sig.n)
 df <- data.frame(Time = t,
-                 PROB = p, 
+                 PROB = p,
                  CDF = CDF,
                  PDF = PDF,
                  REL = REL,
                  haz = haz,
-                 HAZ = HAZ, 
+                 HAZ = HAZ,
                  QUANT = QUANT)
 
 ## CDF
@@ -44,7 +44,7 @@ mjs_plot(df, x = Time, y = HAZ, decimals = 4, top = 0) %>%
   mjs_line(area = TRUE) %>%
   mjs_labs(x_label = 'Time (t)', y_label = 'H(t)')
 
-## Quantile 
+## Quantile
 mjs_plot(df, x = Time, y = QUANT, decimals = 4, top = 0) %>%
   mjs_line(area = TRUE) %>%
-  mjs_labs(x_label = 'Time (t)', y_label = 'F(t)')
+  mjs_labs(x_label = 'Time (t)', y_label = 't(p)')
