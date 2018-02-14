@@ -3,3 +3,6 @@
 .RData
 .Ruserdata
 hidden/
+src/*.dll
+src/*.o
+src/*.so
