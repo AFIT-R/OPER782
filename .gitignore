@@ -2,7 +2,4 @@
 .Rhistory
 .RData
 .Ruserdata
-src/*.dll
-src/*.o
-src/*.so
 hidden/
