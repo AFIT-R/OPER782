@@ -2,21 +2,6 @@ OPER 782 Analytic Deployment Review
 ================
 21 February 2018
 
-<style>
- a { font-weight: bold;
-     text-decoration: underline !important; }
-caption { color: black;
-          text-align: center;
-          font-size: 1.05em;
-          font-weight: bold;
-          padding: 40px 0 20px 0;
-}
-body { font-size: 20px;
-       line-height: 1.5;
-}
-
-#header.fluid-row{ padding-bottom: 50px; }
-</style>
 Part of the analytic development process is ensuring that the algorithms you develop will be reproducible and portable for an end-user. Often an end-user’s machine is not configured in the same way as the developer’s – leading to unexpected side effects or errors. To ensure that your methods are reproducible & portable, your analytic data products will be reviewed on multiple ‘new’ machines representing those used by potential end-users. In lieu of a final exam, each student will be tasked to review two analytic projects developed by students in the course. Using the information presented in the GitHub repository README file and any documentation files provided with the analytic, the reviewer will review the analytic in these areas:
 
 -   Accuracy
@@ -66,20 +51,20 @@ The table below lists each developer, the URL of their respective project, and t
 
 | Developer | Git\_URL                                              | Reviewer1 | Reviewer2 |
 |:----------|:------------------------------------------------------|:----------|:----------|
-| Uhorchak  | <https://github.com/nuhorchak/RClean>                 | Butt      | Stuntz    |
-| Munson    | <https://github.com/evan-l-munson/SAoTD>              | Gallagher | Small     |
-| Ramirez   | <https://github.com/RachelRamirez/NPS>                | Trigo     | Meyer     |
-| Smith     | <https://github.com/JSmith146/CoRpEx>                 | Munson    | Kalhoff   |
-| Trigo     | <https://github.com/citation891/MCAC>                 | Sevier    | Gallagher |
-| Kalhoff   | <https://github.com/AFIT-R/instaExtract>              | Elliott   | Butt      |
-| Butt      | <https://github.com/SpencerButt/IDPS-LAAD>            | Johnson   | Smith     |
-| Elliott   | <https://github.com/jtelliott/attrition-forecast>     | Uhorchak  | Sevier    |
-| Johnson   | <https://github.com/slackliner33/Yahoo_DFS_Optimizer> | Stuntz    | Ramirez   |
-| Sevier    | <https://github.com/williamcsevier/TextML>            | Ramirez   | Johnson   |
-| Small     | <https://github.com/msmall318/Boots>                  | Kalhoff   | Trigo     |
-| Gallagher | <https://github.com/gallagherj2008/SWAT>              | Meyer     | Uhorchak  |
-| Stuntz    |                                                       | Small     | Munson    |
-| Meyer     | <https://github.com/AFIT-R/MODA.git>                  | Smith     | Elliott   |
+| Uhorchak  | <https://github.com/nuhorchak/RClean>                 | Kalhoff   | Gallagher |
+| Munson    | <https://github.com/evan-l-munson/SAoTD>              | Sevier    | Trigo     |
+| Ramirez   | <https://github.com/RachelRamirez/NPS>                | Trigo     | Johnson   |
+| Smith     | <https://github.com/JSmith146/CoRpEx>                 | Munson    | Sevier    |
+| Trigo     | <https://github.com/citation891/MCAC>                 | Small     | Elliott   |
+| Kalhoff   | <https://github.com/AFIT-R/instaExtract>              | Smith     | Meyer     |
+| Butt      | <https://github.com/SpencerButt/IDPS-LAAD>            | Meyer     | Smith     |
+| Elliott   | <https://github.com/jtelliott/attrition-forecast>     | Butt      | Stuntz    |
+| Johnson   | <https://github.com/slackliner33/Yahoo_DFS_Optimizer> | Uhorchak  | Ramirez   |
+| Sevier    | <https://github.com/williamcsevier/TextML>            | Stuntz    | Uhorchak  |
+| Small     | <https://github.com/msmall318/Boots>                  | Ramirez   | Butt      |
+| Gallagher | <https://github.com/gallagherj2008/SWAT>              | Johnson   | Munson    |
+| Stuntz    |                                                       | Gallagher | Small     |
+| Meyer     | <https://github.com/AFIT-R/MODA.git>                  | Elliott   | Kalhoff   |
 
 The assigned reviewers are to:
 
