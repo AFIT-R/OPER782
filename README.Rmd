@@ -118,7 +118,7 @@ git_url <- c('https://github.com/nuhorchak/RClean',
              'https://github.com/msmall318/Boots',
              'https://github.com/gallagherj2008/SWAT',
              '',
-             'https://github.com/AFIT-R/MODA.git')
+             'https://github.com/AFIT-R/MODA')
 ```
 
 The table below lists each developer, the URL of their respective project, and the assigned reviewers. 

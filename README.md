@@ -51,20 +51,20 @@ The table below lists each developer, the URL of their respective project, and t
 
 | Developer | Git\_URL                                              | Reviewer1 | Reviewer2 |
 |:----------|:------------------------------------------------------|:----------|:----------|
-| Uhorchak  | <https://github.com/nuhorchak/RClean>                 | Kalhoff   | Gallagher |
-| Munson    | <https://github.com/evan-l-munson/SAoTD>              | Sevier    | Trigo     |
-| Ramirez   | <https://github.com/RachelRamirez/NPS>                | Trigo     | Johnson   |
-| Smith     | <https://github.com/JSmith146/CoRpEx>                 | Munson    | Sevier    |
-| Trigo     | <https://github.com/citation891/MCAC>                 | Small     | Elliott   |
-| Kalhoff   | <https://github.com/AFIT-R/instaExtract>              | Smith     | Meyer     |
-| Butt      | <https://github.com/SpencerButt/IDPS-LAAD>            | Meyer     | Smith     |
-| Elliott   | <https://github.com/jtelliott/attrition-forecast>     | Butt      | Stuntz    |
-| Johnson   | <https://github.com/slackliner33/Yahoo_DFS_Optimizer> | Uhorchak  | Ramirez   |
-| Sevier    | <https://github.com/williamcsevier/TextML>            | Stuntz    | Uhorchak  |
-| Small     | <https://github.com/msmall318/Boots>                  | Ramirez   | Butt      |
-| Gallagher | <https://github.com/gallagherj2008/SWAT>              | Johnson   | Munson    |
-| Stuntz    |                                                       | Gallagher | Small     |
-| Meyer     | <https://github.com/AFIT-R/MODA.git>                  | Elliott   | Kalhoff   |
+| Uhorchak  | <https://github.com/nuhorchak/RClean>                 | Stuntz    | Sevier    |
+| Munson    | <https://github.com/evan-l-munson/SAoTD>              | Uhorchak  | Stuntz    |
+| Ramirez   | <https://github.com/RachelRamirez/NPS>                | Elliott   | Munson    |
+| Smith     | <https://github.com/JSmith146/CoRpEx>                 | Gallagher | Elliott   |
+| Trigo     | <https://github.com/citation891/MCAC>                 | Smith     | Small     |
+| Kalhoff   | <https://github.com/AFIT-R/instaExtract>              | Johnson   | Trigo     |
+| Butt      | <https://github.com/SpencerButt/IDPS-LAAD>            | Trigo     | Ramirez   |
+| Elliott   | <https://github.com/jtelliott/attrition-forecast>     | Kalhoff   | Uhorchak  |
+| Johnson   | <https://github.com/slackliner33/Yahoo_DFS_Optimizer> | Munson    | Meyer     |
+| Sevier    | <https://github.com/williamcsevier/TextML>            | Ramirez   | Butt      |
+| Small     | <https://github.com/msmall318/Boots>                  | Meyer     | Gallagher |
+| Gallagher | <https://github.com/gallagherj2008/SWAT>              | Butt      | Smith     |
+| Stuntz    |                                                       | Small     | Johnson   |
+| Meyer     | <https://github.com/AFIT-R/MODA>                      | Sevier    | Kalhoff   |
 
 The assigned reviewers are to:
 
