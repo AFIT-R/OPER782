@@ -10,7 +10,15 @@ Description: This package contains a series of functions that
              and other GitHub functionality.
 Depends: R (>= 2.10)
 License: GPL (>= 2)
-Imports: rvest, Rcpp (>= 0.12.14)
+Imports: rvest, 
+         Rcpp (>= 0.12.14), 
+         shiny, 
+         dplyr, 
+         xml2, 
+         metricsgraphics,
+         pacman,
+         shinythemes,
+         stats
 LinkingTo: Rcpp 
 Encoding: UTF-8
 LazyData: true

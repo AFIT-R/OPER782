@@ -4,5 +4,11 @@
 \alias{silly.character}
 \title{Invoke s3 silly method for numeric objects}
 \usage{
-\method{silly}{character}(x, ...)
+\method{silly}{character}(x)
+}
+\arguments{
+\item{x}{A character string}
+}
+\description{
+S3 Method for silly applied to characters
 }

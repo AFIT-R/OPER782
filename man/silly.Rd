@@ -4,5 +4,11 @@
 \alias{silly}
 \title{s3 method for silly}
 \usage{
-silly(x, ...)
+silly(x)
+}
+\arguments{
+\item{x}{A value}
+}
+\description{
+S3 Method for silly
 }
