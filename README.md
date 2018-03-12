@@ -63,7 +63,7 @@ The table below lists each developer, the URL of their respective project, and t
 | Sevier    | <https://github.com/williamcsevier/TextML>            | Ramirez   | Butt      |
 | Small     | <https://github.com/msmall318/Boots>                  | Meyer     | Gallagher |
 | Gallagher | <https://github.com/gallagherj2008/SWAT>              | Butt      | Smith     |
-| Stuntz    |                                                       | Small     | Johnson   |
+| Stuntz    | <https://github.com/seanstuntz/BAW>                   | Small     | Johnson   |
 | Meyer     | <https://github.com/AFIT-R/MODA>                      | Sevier    | Kalhoff   |
 
 The assigned reviewers are to:
