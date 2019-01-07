@@ -1,36 +1,242 @@
 Syllabus of Instruction
 ================
-07 January 2019
 
-<p style="text-align: center;">
+<style>
+p {margin-bottom: 0px !important;}
+table { border: 0 !important;
+        border-spacing: 2px !important;
+        border-collapse: separate !important;
+}
+</style>
 
-OPER 782
+<font size="6">
 
-</p>
+<center>
 
-<p style="text-align: center;">
+**OPER 782**
+
+</center>
+
+</font> <font size="5">
+
+<center>
 
 Data Science Practice
 
-</p>
+</center>
 
-<p style="text-align: center;">
+</font> <font size="4">
+
+<center>
 
 Three Graduate Quarter Hours Credit
 
-</p>
+</center>
 
-<p style="text-align: center;">
+</font> <br> <font size="4">
+
+<center>
+
+Winter Quarter
+
+</center>
+
+</font> <font size="4">
+
+<center>
+
+2 Jan 2019 - 8 Mar 2019
+
+</center>
+
+</font> <br> <font size="5">
+
+<center>
+
+Graduate School of Engineering and Management
+
+</center>
+
+</font> <font size="5">
+
+<center>
+
+Air Force Institute of Technology
+
+</center>
+
+</font> <font size="5">
+
+<center>
+
+Air Education and Training Command
+
+</center>
+
+</font> <br/>
+
+<table border="0">
+
+<tr>
+
+<td>
+
+**Instructor:**
+
+</td>
+
+<td>
 
 Maj. Jason K. Freels, PhD
 
-</p>
+</td>
 
-<p style="text-align: center;">
+</tr>
 
-Assistant Professor
+<tr>
 
-</p>
+<td>
+
+**Office:**
+
+</td>
+
+<td>
+
+Bldg 640, Rm 205A
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+**Email:**
+
+</td>
+
+<td>
+
+<jason.freels@afit.edu>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+</td>
+
+<td>
+
+<jasonkfreels@gmail.com>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+**Phone:**
+
+</td>
+
+<td>
+
+937 255-3636 ext. 4676
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+</td>
+
+<td>
+
+937 430-6619
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+**Office Hours:**
+
+</td>
+
+<td>
+
+TBD
+
+</td>
+
+</tr>
+
+</table>
+
+### Course Overview
+
+Data Science is the study of the generalizable extraction of knowledge
+from data. Being a data scientist requires an integrated skill set
+spanning operations research, statistics, and computer science along
+with a good understanding of crafting a problem formulation for
+effective solutions. In this course, students will use these skills to
+explore various methods of integrating data and algorithms into an
+operationalized analytic data product (aka ‘analytic’). Using these
+methods, students will develop and deploy their own analytic in the form
+of an R package with an embedded interactive Shiny application/gadget.
+
+### Course Objectives
+
+The primary objective of this course is to ensure that students can
+implement & integrate various tools for developing analytic data
+products that allow end-users to make better decisions. More generally,
+at the completion of the course, each student should be able to: <br> 1.
+Understand the importance of deploying analytic data products 2.
+Describe various approaches to deploying analytic data products 3.
+Operationalize analyses by developing a Shiny application or Shiny
+gadget 4. Operationalize analyses by developing R packages 5. Prioritize
+efforts to develop analytic data products under time contraints 6.
+Relate the knowledge and skills learned in this course to decision
+making processes within the Air Force and/or DoD.
+
+### Textbook
+
+No textbook is required for this course, but occasional readings will be
+assigned
+
+### Required Materials
+
+<u>Students registered for this course are expected to have their own
+project to serve as the basis for developing an analytic data
+product.</u> This requirement is in place because it can be very
+difficult for students to understand the methods presented in this
+course without a concrete problem to which these methods can be applied.
+
+Students may request to work together on a project with another student
+in the class. These requests must be submitted in writing (via email) to
+the instructor and must include (a) the names of each person wishing to
+work together (b) a description of the project and (c) an explanation
+detailing why a group effort is needed.
+
+Students who do not have a project, may request to be assigned a project
+from the instructor. Requests for topics must be submitted in writing
+(via email) to the instructor and must include (a) the name of the
+person making the request and (b) a description of the requestor’s
+thesis topic.
 
 # Analytic Deployment Review
 
@@ -106,20 +312,20 @@ reviewers.
 
 | Developer | Git\_URL                                              | Reviewer1 | Reviewer2 |
 | :-------- | :---------------------------------------------------- | :-------- | :-------- |
-| Uhorchak  | <https://github.com/nuhorchak/RClean>                 | Munson    | Kalhoff   |
-| Munson    | <https://github.com/evan-l-munson/SAoTD>              | Sevier    | Stuntz    |
-| Ramirez   | <https://github.com/RachelRamirez/NPS>                | Butt      | Sevier    |
-| Smith     | <https://github.com/JSmith146/CoRpEx>                 | Uhorchak  | Elliott   |
-| Trigo     | <https://github.com/citation891/MCAC>                 | Kalhoff   | Small     |
-| Kalhoff   | <https://github.com/AFIT-R/instaExtract>              | Meyer     | Ramirez   |
-| Butt      | <https://github.com/SpencerButt/IDPS-LAAD>            | Elliott   | Smith     |
-| Elliott   | <https://github.com/jtelliott/attrition-forecast>     | Stuntz    | Uhorchak  |
-| Johnson   | <https://github.com/slackliner33/Yahoo_DFS_Optimizer> | Gallagher | Trigo     |
-| Sevier    | <https://github.com/williamcsevier/TextML>            | Small     | Munson    |
-| Small     | <https://github.com/msmall318/Boots>                  | Ramirez   | Butt      |
-| Gallagher | <https://github.com/gallagherj2008/SWAT>              | Smith     | Meyer     |
-| Stuntz    |                                                       | Johnson   | Johnson   |
-| Meyer     | <https://github.com/AFIT-R/MODA>                      | Trigo     | Gallagher |
+| Uhorchak  | <https://github.com/nuhorchak/RClean>                 | Butt      | Smith     |
+| Munson    | <https://github.com/evan-l-munson/SAoTD>              | Kalhoff   | Gallagher |
+| Ramirez   | <https://github.com/RachelRamirez/NPS>                | Smith     | Sevier    |
+| Smith     | <https://github.com/JSmith146/CoRpEx>                 | Sevier    | Johnson   |
+| Trigo     | <https://github.com/citation891/MCAC>                 | Stuntz    | Uhorchak  |
+| Kalhoff   | <https://github.com/AFIT-R/instaExtract>              | Meyer     | Butt      |
+| Butt      | <https://github.com/SpencerButt/IDPS-LAAD>            | Munson    | Ramirez   |
+| Elliott   | <https://github.com/jtelliott/attrition-forecast>     | Uhorchak  | Munson    |
+| Johnson   | <https://github.com/slackliner33/Yahoo_DFS_Optimizer> | Elliott   | Kalhoff   |
+| Sevier    | <https://github.com/williamcsevier/TextML>            | Small     | Meyer     |
+| Small     | <https://github.com/msmall318/Boots>                  | Johnson   | Trigo     |
+| Gallagher | <https://github.com/gallagherj2008/SWAT>              | Trigo     | Small     |
+| Stuntz    |                                                       | Gallagher | Ramirez   |
+| Meyer     | <https://github.com/AFIT-R/MODA>                      | Ramirez   | Elliott   |
 
 List of developers, projects, and assigned reviewers for OPER782 (Winter
 2018)
