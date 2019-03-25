@@ -2,6 +2,7 @@ ui = navbarPage(title = 'Normal Distribution',
                 collapsible = T,
                 position = 'fixed-top',
                 theme  = shinythemes::shinytheme('flatly'),
+                shiny::includeCSS('www/custom.css'),
 
                 tabPanel('Distribution Functions',
                          uiOutput('norfunc')),
@@ -10,8 +11,6 @@ ui = navbarPage(title = 'Normal Distribution',
                          uiOutput('norprops')),
 
 tabPanel('Shiny App',
-
-                        sidebarLayout(
                           sidebarPanel(width = 3,
                                        hr(),
                                        sliderInput("range.n",
@@ -49,6 +48,22 @@ tabPanel('Shiny App',
                                                 tabPanel('Cumulative Hazard',
                                                          metricsgraphicsOutput(height = "550px", "norH")),
                                                 tabPanel('Quantile',
-                                                         metricsgraphicsOutput(height = "550px", "norQ")))))
+                                                         metricsgraphicsOutput(height = "550px", "norQ"))))
+          ),
+tabPanel('Maps!',
+         sidebarLayout(
+           sidebarPanel(width = 4,
+                        sliderInput('slider',
+                                    label = 'Choose the Number of Colors',
+                                    min = 1,
+                                    max = 9,
+                                    value = 4),
+                        selectInput('select',
+                                    label = 'Select a Column',
+                                    choices = colnames(map_data)[-1],
+                                    selected = colnames(map_data)[4])),
+           mainPanel(plotOutput('mapplot')))),
 
-          ))
+tabPanel('Map Data',
+         mainPanel(width = 12,
+                   DT::dataTableOutput('mapdata'))))
