@@ -80,4 +80,21 @@ output$norprops <- renderUI({
 
   file = 'nor-props.Rmd'
   withMathJax(HTML(markdown::markdownToHTML(knitr::knit(file))))})
+
+
+output$mapplot <- renderPlot({
+
+  map_data$value = map_data[, input$select]
+
+  state_choropleth(map_data,
+                   title = 'stuff',
+                   num_colors = input$slider)
+})
+
+output$mapdata <- DT::renderDataTable({
+
+  DT::datatable(map_data)
+
+
+})
 }
