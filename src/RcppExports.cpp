@@ -5,6 +5,21 @@
 
 using namespace Rcpp;
 
+// scaled_betaPDF
+List scaled_betaPDF(NumericVector y, double low, double high, double shape1, double shape2);
+RcppExport SEXP _OPER782_scaled_betaPDF(SEXP ySEXP, SEXP lowSEXP, SEXP highSEXP, SEXP shape1SEXP, SEXP shape2SEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericVector >::type y(ySEXP);
+    Rcpp::traits::input_parameter< double >::type low(lowSEXP);
+    Rcpp::traits::input_parameter< double >::type high(highSEXP);
+    Rcpp::traits::input_parameter< double >::type shape1(shape1SEXP);
+    Rcpp::traits::input_parameter< double >::type shape2(shape2SEXP);
+    rcpp_result_gen = Rcpp::wrap(scaled_betaPDF(y, low, high, shape1, shape2));
+    return rcpp_result_gen;
+END_RCPP
+}
 // rcpp_hello_world
 List rcpp_hello_world();
 RcppExport SEXP _OPER782_rcpp_hello_world() {
@@ -17,6 +32,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_OPER782_scaled_betaPDF", (DL_FUNC) &_OPER782_scaled_betaPDF, 5},
     {"_OPER782_rcpp_hello_world", (DL_FUNC) &_OPER782_rcpp_hello_world, 0},
     {NULL, NULL, 0}
 };
